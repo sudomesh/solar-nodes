@@ -1,0 +1,3031 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- mobile mode if small screen device -->
+    
+    <title>Sunny Buddy Solar Charger V13 Hookup Guide  - learn.sparkfun.com</title>
+
+          <link rel="canonical" href="https://learn.sparkfun.com/tutorials/sunny-buddy-solar-charger-v13-hookup-guide-/all">
+            
+    <link href="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/theme.css" type="text/css" media="screen">    <link rel="alternate" type="application/atom+xml" title="Education Blog" href="https://learn.sparkfun.com/feeds/blog">
+    <link rel="alternate" type="application/atom+xml" title="Tutorials" href="https://learn.sparkfun.com/feeds/tutorials">
+    <link rel="alternate" type="application/atom+xml" title="Education Blog Comments" href="https://learn.sparkfun.com/feeds/blog_comments">
+    <link rel="alternate" type="application/atom+xml" title="Tutorial Comments" href="https://learn.sparkfun.com/feeds/tutorial_comments">
+  <script type="text/javascript" async="" src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/recaptcha__en.js"></script><script id="g-recaptcha-script" src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/api.js" async="" defer="defer"></script><style type="text/css" id="hs-form-styled2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42">.fn-date-picker.pika-single{z-index:9999;display:block;position:relative;color:#333;background:#fff;border:1px solid #ccc;border-bottom-color:#bbb;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;*zoom:1}.fn-date-picker.pika-single.is-hidden{display:none}.fn-date-picker.pika-single.is-bound{position:absolute;box-shadow:0 5px 15px -5px rgba(0,0,0,0.5)}.fn-date-picker.pika-single:before,.fn-date-picker.pika-single:after{content:" ";display:table}.fn-date-picker.pika-single:after{clear:both}.fn-date-picker .pika-lendar{float:left;width:240px;margin:8px}.fn-date-picker .pika-title{position:relative;text-align:center}.fn-date-picker .pika-title select{cursor:pointer;position:absolute;z-index:9998;margin:0;left:0;top:5px;filter:alpha(opacity=0);opacity:0}.fn-date-picker .pika-label{display:inline-block;*display:inline;position:relative;z-index:9999;overflow:hidden;margin:0;padding:5px 3px;font-size:14px;line-height:20px;font-weight:bold;background-color:#fff}.fn-date-picker .pika-prev,.fn-date-picker .pika-next{display:block;cursor:pointer;position:relative;outline:none;border:0;padding:0;width:20px;height:30px;text-indent:20px;white-space:nowrap;overflow:hidden;background-color:transparent;background-position:center center;background-repeat:no-repeat;background-size:75% 75%;opacity:0.5;*position:absolute;*top:0}.fn-date-picker .pika-prev:hover,.fn-date-picker .pika-next:hover{opacity:1}.fn-date-picker .pika-prev.is-disabled,.fn-date-picker .pika-next.is-disabled{cursor:default;opacity:0.2}.fn-date-picker .pika-prev,.fn-date-picker .is-rtl .pika-next{float:left;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==");*left:0}.fn-date-picker .pika-next,.fn-date-picker .is-rtl .pika-prev{float:right;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=");*right:0}.fn-date-picker .pika-select{display:inline-block;*display:inline}.fn-date-picker .pika-table{width:100%;border-collapse:collapse;border-spacing:0;border:0}.fn-date-picker .pika-table th,.fn-date-picker .pika-table td{width:14.28571%;padding:0}.fn-date-picker .pika-table th{color:#999;font-size:12px;line-height:25px;font-weight:bold;text-align:center}.fn-date-picker .pika-table abbr{border-bottom:none;cursor:help}.fn-date-picker .pika-button{cursor:pointer;display:block;-moz-box-sizing:border-box;box-sizing:border-box;outline:none;border:0;margin:0;width:100%;padding:5px;color:#666;font-size:12px;line-height:15px;text-align:right;background:#f5f5f5}.fn-date-picker .pika-button:hover{color:#fff !important;background:#ff8000 !important;box-shadow:none !important;border-radius:3px !important}.fn-date-picker .is-today .pika-button{color:#3af;font-weight:bold}.fn-date-picker .is-selected .pika-button{color:#fff;font-weight:bold;background:#3af;box-shadow:inset 0 1px 3px #178fe5;border-radius:3px}.fn-date-picker .is-disabled .pika-button{pointer-events:none;cursor:default;color:#999;opacity:0.3}.fn-date-picker .pika-week{font-size:11px;color:#999}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 .inputs-list.inline-list li{vertical-align:top;display:inline-block;word-wrap:break-word;padding-right:16px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 .inputs-list.inline-list li:after{clear:both}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 .inputs-list.inline-list li input{float:left}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 .inputs-list.inline-list.inline-list-2 li{width:50%}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 .inputs-list.inline-list.inline-list-2 li:nth-child(2n){padding-right:0}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 .inputs-list.inline-list.inline-list-3 li{width:33%}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 .inputs-list.inline-list.inline-list-3 li:nth-child(3n){width:34%;padding-right:0}.hs-fieldtype-intl-phone.hs-input{padding:0;background:none;border:none;height:auto}.hs-fieldtype-intl-phone.hs-input:after{clear:both;content:" ";display:table}.hs-fieldtype-intl-phone.hs-input .hs-input{margin-bottom:0}.hs-fieldtype-intl-phone.hs-input input{width:68% !important;float:right}.hs-fieldtype-intl-phone.hs-input select{float:left;width:30% !important}@media (max-width: 400px), (max-device-width: 480px) and (min-device-width: 320px){.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42>.hs-phone>.input>.hs-fieldtype-intl-phone.hs-input>input.hs-input{width:68% !important}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42>.hs-phone>.input>.hs-fieldtype-intl-phone.hs-input>select.hs-input{width:30% !important}}.hs-input-range-container{width:95%}.hs-input-range-container div{display:inline-block;line-height:50px}.hs-input-range-container .hs-input-range{width:90%;height:40px}.hs-input-range-container .hs-input-range>*{vertical-align:middle}.hs-input-range-container .hs-input-range input{margin:0 5px;width:85%}.hs-input-range-container .hs-input-range-value-container{width:10%}.hs-input-range-container .hs-input{width:100% !important;margin-right:1px;background-color:#fff;text-align:center}.hs-input-range__slider{appearance:none;margin:0;height:30px;overflow:hidden;cursor:pointer}.hs-input-range__slider:focus{outline:none}.hs-input-range__slider::-webkit-slider-runnable-track{width:100%;height:30px;background:linear-gradient(to bottom, #0199ff,#0199ff) 100% 50%/100% 3px no-repeat transparent}.hs-input-range__slider::-webkit-slider-thumb{position:relative;appearance:none;height:13px;width:13px;background:#0199ff;border-radius:100%;border:0;top:50%;margin-top:-7.5px;box-shadow:1px 0 0 -5px #cfcfcf,2px 0 0 -5px #cfcfcf,3px 0 0 -5px #cfcfcf,4px 0 0 -5px #cfcfcf,5px 0 0 -5px #cfcfcf,6px 0 0 -5px #cfcfcf,7px 0 0 -5px #cfcfcf,8px 0 0 -5px #cfcfcf,9px 0 0 -5px #cfcfcf,10px 0 0 -5px #cfcfcf,11px 0 0 -5px #cfcfcf,12px 0 0 -5px #cfcfcf,13px 0 0 -5px #cfcfcf,14px 0 0 -5px #cfcfcf,15px 0 0 -5px #cfcfcf,16px 0 0 -5px #cfcfcf,17px 0 0 -5px #cfcfcf,18px 0 0 -5px #cfcfcf,19px 0 0 -5px #cfcfcf,20px 0 0 -5px #cfcfcf,21px 0 0 -5px #cfcfcf,22px 0 0 -5px #cfcfcf,23px 0 0 -5px #cfcfcf,24px 0 0 -5px #cfcfcf,25px 0 0 -5px #cfcfcf,26px 0 0 -5px #cfcfcf,27px 0 0 -5px #cfcfcf,28px 0 0 -5px #cfcfcf,29px 0 0 -5px #cfcfcf,30px 0 0 -5px #cfcfcf,31px 0 0 -5px #cfcfcf,32px 0 0 -5px #cfcfcf,33px 0 0 -5px #cfcfcf,34px 0 0 -5px #cfcfcf,35px 0 0 -5px #cfcfcf,36px 0 0 -5px #cfcfcf,37px 0 0 -5px #cfcfcf,38px 0 0 -5px #cfcfcf,39px 0 0 -5px #cfcfcf,40px 0 0 -5px #cfcfcf,41px 0 0 -5px #cfcfcf,42px 0 0 -5px #cfcfcf,43px 0 0 -5px #cfcfcf,44px 0 0 -5px #cfcfcf,45px 0 0 -5px #cfcfcf,46px 0 0 -5px #cfcfcf,47px 0 0 -5px #cfcfcf,48px 0 0 -5px #cfcfcf,49px 0 0 -5px #cfcfcf,50px 0 0 -5px #cfcfcf,51px 0 0 -5px #cfcfcf,52px 0 0 -5px #cfcfcf,53px 0 0 -5px #cfcfcf,54px 0 0 -5px #cfcfcf,55px 0 0 -5px #cfcfcf,56px 0 0 -5px #cfcfcf,57px 0 0 -5px #cfcfcf,58px 0 0 -5px #cfcfcf,59px 0 0 -5px #cfcfcf,60px 0 0 -5px #cfcfcf,61px 0 0 -5px #cfcfcf,62px 0 0 -5px #cfcfcf,63px 0 0 -5px #cfcfcf,64px 0 0 -5px #cfcfcf,65px 0 0 -5px #cfcfcf,66px 0 0 -5px #cfcfcf,67px 0 0 -5px #cfcfcf,68px 0 0 -5px #cfcfcf,69px 0 0 -5px #cfcfcf,70px 0 0 -5px #cfcfcf,71px 0 0 -5px #cfcfcf,72px 0 0 -5px #cfcfcf,73px 0 0 -5px #cfcfcf,74px 0 0 -5px #cfcfcf,75px 0 0 -5px #cfcfcf,76px 0 0 -5px #cfcfcf,77px 0 0 -5px #cfcfcf,78px 0 0 -5px #cfcfcf,79px 0 0 -5px #cfcfcf,80px 0 0 -5px #cfcfcf,81px 0 0 -5px #cfcfcf,82px 0 0 -5px #cfcfcf,83px 0 0 -5px #cfcfcf,84px 0 0 -5px #cfcfcf,85px 0 0 -5px #cfcfcf,86px 0 0 -5px #cfcfcf,87px 0 0 -5px #cfcfcf,88px 0 0 -5px #cfcfcf,89px 0 0 -5px #cfcfcf,90px 0 0 -5px #cfcfcf,91px 0 0 -5px #cfcfcf,92px 0 0 -5px #cfcfcf,93px 0 0 -5px #cfcfcf,94px 0 0 -5px #cfcfcf,95px 0 0 -5px #cfcfcf,96px 0 0 -5px #cfcfcf,97px 0 0 -5px #cfcfcf,98px 0 0 -5px #cfcfcf,99px 0 0 -5px #cfcfcf,100px 0 0 -5px #cfcfcf,101px 0 0 -5px #cfcfcf,102px 0 0 -5px #cfcfcf,103px 0 0 -5px #cfcfcf,104px 0 0 -5px #cfcfcf,105px 0 0 -5px #cfcfcf,106px 0 0 -5px #cfcfcf,107px 0 0 -5px #cfcfcf,108px 0 0 -5px #cfcfcf,109px 0 0 -5px #cfcfcf,110px 0 0 -5px #cfcfcf,111px 0 0 -5px #cfcfcf,112px 0 0 -5px #cfcfcf,113px 0 0 -5px #cfcfcf,114px 0 0 -5px #cfcfcf,115px 0 0 -5px #cfcfcf,116px 0 0 -5px #cfcfcf,117px 0 0 -5px #cfcfcf,118px 0 0 -5px #cfcfcf,119px 0 0 -5px #cfcfcf,120px 0 0 -5px #cfcfcf,121px 0 0 -5px #cfcfcf,122px 0 0 -5px #cfcfcf,123px 0 0 -5px #cfcfcf,124px 0 0 -5px #cfcfcf,125px 0 0 -5px #cfcfcf,126px 0 0 -5px #cfcfcf,127px 0 0 -5px #cfcfcf,128px 0 0 -5px #cfcfcf,129px 0 0 -5px #cfcfcf,130px 0 0 -5px #cfcfcf,131px 0 0 -5px #cfcfcf,132px 0 0 -5px #cfcfcf,133px 0 0 -5px #cfcfcf,134px 0 0 -5px #cfcfcf,135px 0 0 -5px #cfcfcf,136px 0 0 -5px #cfcfcf,137px 0 0 -5px #cfcfcf,138px 0 0 -5px #cfcfcf,139px 0 0 -5px #cfcfcf,140px 0 0 -5px #cfcfcf,141px 0 0 -5px #cfcfcf,142px 0 0 -5px #cfcfcf,143px 0 0 -5px #cfcfcf,144px 0 0 -5px #cfcfcf,145px 0 0 -5px #cfcfcf,146px 0 0 -5px #cfcfcf,147px 0 0 -5px #cfcfcf,148px 0 0 -5px #cfcfcf,149px 0 0 -5px #cfcfcf,150px 0 0 -5px #cfcfcf,151px 0 0 -5px #cfcfcf,152px 0 0 -5px #cfcfcf,153px 0 0 -5px #cfcfcf,154px 0 0 -5px #cfcfcf,155px 0 0 -5px #cfcfcf,156px 0 0 -5px #cfcfcf,157px 0 0 -5px #cfcfcf,158px 0 0 -5px #cfcfcf,159px 0 0 -5px #cfcfcf,160px 0 0 -5px #cfcfcf,161px 0 0 -5px #cfcfcf,162px 0 0 -5px #cfcfcf,163px 0 0 -5px #cfcfcf,164px 0 0 -5px #cfcfcf,165px 0 0 -5px #cfcfcf,166px 0 0 -5px #cfcfcf,167px 0 0 -5px #cfcfcf,168px 0 0 -5px #cfcfcf,169px 0 0 -5px #cfcfcf,170px 0 0 -5px #cfcfcf,171px 0 0 -5px #cfcfcf,172px 0 0 -5px #cfcfcf,173px 0 0 -5px #cfcfcf,174px 0 0 -5px #cfcfcf,175px 0 0 -5px #cfcfcf,176px 0 0 -5px #cfcfcf,177px 0 0 -5px #cfcfcf,178px 0 0 -5px #cfcfcf,179px 0 0 -5px #cfcfcf,180px 0 0 -5px #cfcfcf,181px 0 0 -5px #cfcfcf,182px 0 0 -5px #cfcfcf,183px 0 0 -5px #cfcfcf,184px 0 0 -5px #cfcfcf,185px 0 0 -5px #cfcfcf,186px 0 0 -5px #cfcfcf,187px 0 0 -5px #cfcfcf,188px 0 0 -5px #cfcfcf,189px 0 0 -5px #cfcfcf,190px 0 0 -5px #cfcfcf,191px 0 0 -5px #cfcfcf,192px 0 0 -5px #cfcfcf,193px 0 0 -5px #cfcfcf,194px 0 0 -5px #cfcfcf,195px 0 0 -5px #cfcfcf,196px 0 0 -5px #cfcfcf,197px 0 0 -5px #cfcfcf,198px 0 0 -5px #cfcfcf,199px 0 0 -5px #cfcfcf,200px 0 0 -5px #cfcfcf,201px 0 0 -5px #cfcfcf,202px 0 0 -5px #cfcfcf,203px 0 0 -5px #cfcfcf,204px 0 0 -5px #cfcfcf,205px 0 0 -5px #cfcfcf,206px 0 0 -5px #cfcfcf,207px 0 0 -5px #cfcfcf,208px 0 0 -5px #cfcfcf,209px 0 0 -5px #cfcfcf,210px 0 0 -5px #cfcfcf,211px 0 0 -5px #cfcfcf,212px 0 0 -5px #cfcfcf,213px 0 0 -5px #cfcfcf,214px 0 0 -5px #cfcfcf,215px 0 0 -5px #cfcfcf,216px 0 0 -5px #cfcfcf,217px 0 0 -5px #cfcfcf,218px 0 0 -5px #cfcfcf,219px 0 0 -5px #cfcfcf,220px 0 0 -5px #cfcfcf,221px 0 0 -5px #cfcfcf,222px 0 0 -5px #cfcfcf,223px 0 0 -5px #cfcfcf,224px 0 0 -5px #cfcfcf,225px 0 0 -5px #cfcfcf,226px 0 0 -5px #cfcfcf,227px 0 0 -5px #cfcfcf,228px 0 0 -5px #cfcfcf,229px 0 0 -5px #cfcfcf,230px 0 0 -5px #cfcfcf,231px 0 0 -5px #cfcfcf,232px 0 0 -5px #cfcfcf,233px 0 0 -5px #cfcfcf,234px 0 0 -5px #cfcfcf,235px 0 0 -5px #cfcfcf,236px 0 0 -5px #cfcfcf,237px 0 0 -5px #cfcfcf,238px 0 0 -5px #cfcfcf,239px 0 0 -5px #cfcfcf,240px 0 0 -5px #cfcfcf,241px 0 0 -5px #cfcfcf,242px 0 0 -5px #cfcfcf,243px 0 0 -5px #cfcfcf,244px 0 0 -5px #cfcfcf,245px 0 0 -5px #cfcfcf,246px 0 0 -5px #cfcfcf,247px 0 0 -5px #cfcfcf,248px 0 0 -5px #cfcfcf,249px 0 0 -5px #cfcfcf,250px 0 0 -5px #cfcfcf,251px 0 0 -5px #cfcfcf,252px 0 0 -5px #cfcfcf,253px 0 0 -5px #cfcfcf,254px 0 0 -5px #cfcfcf,255px 0 0 -5px #cfcfcf,256px 0 0 -5px #cfcfcf,257px 0 0 -5px #cfcfcf,258px 0 0 -5px #cfcfcf,259px 0 0 -5px #cfcfcf,260px 0 0 -5px #cfcfcf,261px 0 0 -5px #cfcfcf,262px 0 0 -5px #cfcfcf,263px 0 0 -5px #cfcfcf,264px 0 0 -5px #cfcfcf,265px 0 0 -5px #cfcfcf,266px 0 0 -5px #cfcfcf,267px 0 0 -5px #cfcfcf,268px 0 0 -5px #cfcfcf,269px 0 0 -5px #cfcfcf,270px 0 0 -5px #cfcfcf,271px 0 0 -5px #cfcfcf,272px 0 0 -5px #cfcfcf,273px 0 0 -5px #cfcfcf,274px 0 0 -5px #cfcfcf,275px 0 0 -5px #cfcfcf,276px 0 0 -5px #cfcfcf,277px 0 0 -5px #cfcfcf,278px 0 0 -5px #cfcfcf,279px 0 0 -5px #cfcfcf,280px 0 0 -5px #cfcfcf,281px 0 0 -5px #cfcfcf,282px 0 0 -5px #cfcfcf,283px 0 0 -5px #cfcfcf,284px 0 0 -5px #cfcfcf,285px 0 0 -5px #cfcfcf,286px 0 0 -5px #cfcfcf,287px 0 0 -5px #cfcfcf,288px 0 0 -5px #cfcfcf,289px 0 0 -5px #cfcfcf,290px 0 0 -5px #cfcfcf,291px 0 0 -5px #cfcfcf,292px 0 0 -5px #cfcfcf,293px 0 0 -5px #cfcfcf,294px 0 0 -5px #cfcfcf,295px 0 0 -5px #cfcfcf,296px 0 0 -5px #cfcfcf,297px 0 0 -5px #cfcfcf,298px 0 0 -5px #cfcfcf,299px 0 0 -5px #cfcfcf,300px 0 0 -5px #cfcfcf,301px 0 0 -5px #cfcfcf,302px 0 0 -5px #cfcfcf,303px 0 0 -5px #cfcfcf,304px 0 0 -5px #cfcfcf,305px 0 0 -5px #cfcfcf,306px 0 0 -5px #cfcfcf,307px 0 0 -5px #cfcfcf,308px 0 0 -5px #cfcfcf,309px 0 0 -5px #cfcfcf,310px 0 0 -5px #cfcfcf,311px 0 0 -5px #cfcfcf,312px 0 0 -5px #cfcfcf,313px 0 0 -5px #cfcfcf,314px 0 0 -5px #cfcfcf,315px 0 0 -5px #cfcfcf,316px 0 0 -5px #cfcfcf,317px 0 0 -5px #cfcfcf,318px 0 0 -5px #cfcfcf,319px 0 0 -5px #cfcfcf,320px 0 0 -5px #cfcfcf,321px 0 0 -5px #cfcfcf,322px 0 0 -5px #cfcfcf,323px 0 0 -5px #cfcfcf,324px 0 0 -5px #cfcfcf,325px 0 0 -5px #cfcfcf,326px 0 0 -5px #cfcfcf,327px 0 0 -5px #cfcfcf,328px 0 0 -5px #cfcfcf,329px 0 0 -5px #cfcfcf,330px 0 0 -5px #cfcfcf,331px 0 0 -5px #cfcfcf,332px 0 0 -5px #cfcfcf,333px 0 0 -5px #cfcfcf,334px 0 0 -5px #cfcfcf,335px 0 0 -5px #cfcfcf,336px 0 0 -5px #cfcfcf,337px 0 0 -5px #cfcfcf,338px 0 0 -5px #cfcfcf,339px 0 0 -5px #cfcfcf,340px 0 0 -5px #cfcfcf,341px 0 0 -5px #cfcfcf,342px 0 0 -5px #cfcfcf,343px 0 0 -5px #cfcfcf,344px 0 0 -5px #cfcfcf,345px 0 0 -5px #cfcfcf,346px 0 0 -5px #cfcfcf,347px 0 0 -5px #cfcfcf,348px 0 0 -5px #cfcfcf,349px 0 0 -5px #cfcfcf,350px 0 0 -5px #cfcfcf,351px 0 0 -5px #cfcfcf,352px 0 0 -5px #cfcfcf,353px 0 0 -5px #cfcfcf,354px 0 0 -5px #cfcfcf,355px 0 0 -5px #cfcfcf,356px 0 0 -5px #cfcfcf,357px 0 0 -5px #cfcfcf,358px 0 0 -5px #cfcfcf,359px 0 0 -5px #cfcfcf,360px 0 0 -5px #cfcfcf,361px 0 0 -5px #cfcfcf,362px 0 0 -5px #cfcfcf,363px 0 0 -5px #cfcfcf,364px 0 0 -5px #cfcfcf,365px 0 0 -5px #cfcfcf,366px 0 0 -5px #cfcfcf,367px 0 0 -5px #cfcfcf,368px 0 0 -5px #cfcfcf,369px 0 0 -5px #cfcfcf,370px 0 0 -5px #cfcfcf,371px 0 0 -5px #cfcfcf,372px 0 0 -5px #cfcfcf,373px 0 0 -5px #cfcfcf,374px 0 0 -5px #cfcfcf,375px 0 0 -5px #cfcfcf,376px 0 0 -5px #cfcfcf,377px 0 0 -5px #cfcfcf,378px 0 0 -5px #cfcfcf,379px 0 0 -5px #cfcfcf,380px 0 0 -5px #cfcfcf,381px 0 0 -5px #cfcfcf,382px 0 0 -5px #cfcfcf,383px 0 0 -5px #cfcfcf,384px 0 0 -5px #cfcfcf,385px 0 0 -5px #cfcfcf,386px 0 0 -5px #cfcfcf,387px 0 0 -5px #cfcfcf,388px 0 0 -5px #cfcfcf,389px 0 0 -5px #cfcfcf,390px 0 0 -5px #cfcfcf,391px 0 0 -5px #cfcfcf,392px 0 0 -5px #cfcfcf,393px 0 0 -5px #cfcfcf,394px 0 0 -5px #cfcfcf,395px 0 0 -5px #cfcfcf,396px 0 0 -5px #cfcfcf,397px 0 0 -5px #cfcfcf,398px 0 0 -5px #cfcfcf,399px 0 0 -5px #cfcfcf,400px 0 0 -5px #cfcfcf,401px 0 0 -5px #cfcfcf,402px 0 0 -5px #cfcfcf,403px 0 0 -5px #cfcfcf,404px 0 0 -5px #cfcfcf,405px 0 0 -5px #cfcfcf,406px 0 0 -5px #cfcfcf,407px 0 0 -5px #cfcfcf,408px 0 0 -5px #cfcfcf,409px 0 0 -5px #cfcfcf,410px 0 0 -5px #cfcfcf,411px 0 0 -5px #cfcfcf,412px 0 0 -5px #cfcfcf,413px 0 0 -5px #cfcfcf,414px 0 0 -5px #cfcfcf,415px 0 0 -5px #cfcfcf,416px 0 0 -5px #cfcfcf,417px 0 0 -5px #cfcfcf,418px 0 0 -5px #cfcfcf,419px 0 0 -5px #cfcfcf,420px 0 0 -5px #cfcfcf,421px 0 0 -5px #cfcfcf,422px 0 0 -5px #cfcfcf,423px 0 0 -5px #cfcfcf,424px 0 0 -5px #cfcfcf,425px 0 0 -5px #cfcfcf,426px 0 0 -5px #cfcfcf,427px 0 0 -5px #cfcfcf,428px 0 0 -5px #cfcfcf,429px 0 0 -5px #cfcfcf,430px 0 0 -5px #cfcfcf,431px 0 0 -5px #cfcfcf,432px 0 0 -5px #cfcfcf,433px 0 0 -5px #cfcfcf,434px 0 0 -5px #cfcfcf,435px 0 0 -5px #cfcfcf,436px 0 0 -5px #cfcfcf,437px 0 0 -5px #cfcfcf,438px 0 0 -5px #cfcfcf,439px 0 0 -5px #cfcfcf,440px 0 0 -5px #cfcfcf,441px 0 0 -5px #cfcfcf,442px 0 0 -5px #cfcfcf,443px 0 0 -5px #cfcfcf,444px 0 0 -5px #cfcfcf,445px 0 0 -5px #cfcfcf,446px 0 0 -5px #cfcfcf,447px 0 0 -5px #cfcfcf,448px 0 0 -5px #cfcfcf,449px 0 0 -5px #cfcfcf,450px 0 0 -5px #cfcfcf,451px 0 0 -5px #cfcfcf,452px 0 0 -5px #cfcfcf,453px 0 0 -5px #cfcfcf,454px 0 0 -5px #cfcfcf,455px 0 0 -5px #cfcfcf,456px 0 0 -5px #cfcfcf,457px 0 0 -5px #cfcfcf,458px 0 0 -5px #cfcfcf,459px 0 0 -5px #cfcfcf,460px 0 0 -5px #cfcfcf,461px 0 0 -5px #cfcfcf,462px 0 0 -5px #cfcfcf,463px 0 0 -5px #cfcfcf,464px 0 0 -5px #cfcfcf,465px 0 0 -5px #cfcfcf,466px 0 0 -5px #cfcfcf,467px 0 0 -5px #cfcfcf,468px 0 0 -5px #cfcfcf,469px 0 0 -5px #cfcfcf,470px 0 0 -5px #cfcfcf,471px 0 0 -5px #cfcfcf,472px 0 0 -5px #cfcfcf,473px 0 0 -5px #cfcfcf,474px 0 0 -5px #cfcfcf,475px 0 0 -5px #cfcfcf,476px 0 0 -5px #cfcfcf,477px 0 0 -5px #cfcfcf,478px 0 0 -5px #cfcfcf,479px 0 0 -5px #cfcfcf,480px 0 0 -5px #cfcfcf,481px 0 0 -5px #cfcfcf,482px 0 0 -5px #cfcfcf,483px 0 0 -5px #cfcfcf,484px 0 0 -5px #cfcfcf,485px 0 0 -5px #cfcfcf,486px 0 0 -5px #cfcfcf,487px 0 0 -5px #cfcfcf,488px 0 0 -5px #cfcfcf,489px 0 0 -5px #cfcfcf,490px 0 0 -5px #cfcfcf,491px 0 0 -5px #cfcfcf,492px 0 0 -5px #cfcfcf,493px 0 0 -5px #cfcfcf,494px 0 0 -5px #cfcfcf,495px 0 0 -5px #cfcfcf,496px 0 0 -5px #cfcfcf,497px 0 0 -5px #cfcfcf,498px 0 0 -5px #cfcfcf,499px 0 0 -5px #cfcfcf,500px 0 0 -5px #cfcfcf,501px 0 0 -5px #cfcfcf,502px 0 0 -5px #cfcfcf,503px 0 0 -5px #cfcfcf,504px 0 0 -5px #cfcfcf,505px 0 0 -5px #cfcfcf,506px 0 0 -5px #cfcfcf,507px 0 0 -5px #cfcfcf,508px 0 0 -5px #cfcfcf,509px 0 0 -5px #cfcfcf,510px 0 0 -5px #cfcfcf,511px 0 0 -5px #cfcfcf,512px 0 0 -5px #cfcfcf,513px 0 0 -5px #cfcfcf,514px 0 0 -5px #cfcfcf,515px 0 0 -5px #cfcfcf,516px 0 0 -5px #cfcfcf,517px 0 0 -5px #cfcfcf,518px 0 0 -5px #cfcfcf,519px 0 0 -5px #cfcfcf,520px 0 0 -5px #cfcfcf,521px 0 0 -5px #cfcfcf,522px 0 0 -5px #cfcfcf,523px 0 0 -5px #cfcfcf,524px 0 0 -5px #cfcfcf,525px 0 0 -5px #cfcfcf,526px 0 0 -5px #cfcfcf,527px 0 0 -5px #cfcfcf,528px 0 0 -5px #cfcfcf,529px 0 0 -5px #cfcfcf,530px 0 0 -5px #cfcfcf,531px 0 0 -5px #cfcfcf,532px 0 0 -5px #cfcfcf,533px 0 0 -5px #cfcfcf,534px 0 0 -5px #cfcfcf,535px 0 0 -5px #cfcfcf,536px 0 0 -5px #cfcfcf,537px 0 0 -5px #cfcfcf,538px 0 0 -5px #cfcfcf,539px 0 0 -5px #cfcfcf,540px 0 0 -5px #cfcfcf,541px 0 0 -5px #cfcfcf,542px 0 0 -5px #cfcfcf,543px 0 0 -5px #cfcfcf,544px 0 0 -5px #cfcfcf,545px 0 0 -5px #cfcfcf,546px 0 0 -5px #cfcfcf,547px 0 0 -5px #cfcfcf,548px 0 0 -5px #cfcfcf,549px 0 0 -5px #cfcfcf,550px 0 0 -5px #cfcfcf,551px 0 0 -5px #cfcfcf,552px 0 0 -5px #cfcfcf,553px 0 0 -5px #cfcfcf,554px 0 0 -5px #cfcfcf,555px 0 0 -5px #cfcfcf,556px 0 0 -5px #cfcfcf,557px 0 0 -5px #cfcfcf,558px 0 0 -5px #cfcfcf,559px 0 0 -5px #cfcfcf,560px 0 0 -5px #cfcfcf,561px 0 0 -5px #cfcfcf,562px 0 0 -5px #cfcfcf,563px 0 0 -5px #cfcfcf,564px 0 0 -5px #cfcfcf,565px 0 0 -5px #cfcfcf,566px 0 0 -5px #cfcfcf,567px 0 0 -5px #cfcfcf,568px 0 0 -5px #cfcfcf,569px 0 0 -5px #cfcfcf,570px 0 0 -5px #cfcfcf,571px 0 0 -5px #cfcfcf,572px 0 0 -5px #cfcfcf,573px 0 0 -5px #cfcfcf,574px 0 0 -5px #cfcfcf,575px 0 0 -5px #cfcfcf,576px 0 0 -5px #cfcfcf,577px 0 0 -5px #cfcfcf,578px 0 0 -5px #cfcfcf,579px 0 0 -5px #cfcfcf,580px 0 0 -5px #cfcfcf,581px 0 0 -5px #cfcfcf,582px 0 0 -5px #cfcfcf,583px 0 0 -5px #cfcfcf,584px 0 0 -5px #cfcfcf,585px 0 0 -5px #cfcfcf,586px 0 0 -5px #cfcfcf,587px 0 0 -5px #cfcfcf,588px 0 0 -5px #cfcfcf,589px 0 0 -5px #cfcfcf,590px 0 0 -5px #cfcfcf,591px 0 0 -5px #cfcfcf,592px 0 0 -5px #cfcfcf,593px 0 0 -5px #cfcfcf,594px 0 0 -5px #cfcfcf,595px 0 0 -5px #cfcfcf,596px 0 0 -5px #cfcfcf,597px 0 0 -5px #cfcfcf,598px 0 0 -5px #cfcfcf,599px 0 0 -5px #cfcfcf,600px 0 0 -5px #cfcfcf,601px 0 0 -5px #cfcfcf,602px 0 0 -5px #cfcfcf,603px 0 0 -5px #cfcfcf,604px 0 0 -5px #cfcfcf,605px 0 0 -5px #cfcfcf,606px 0 0 -5px #cfcfcf,607px 0 0 -5px #cfcfcf,608px 0 0 -5px #cfcfcf,609px 0 0 -5px #cfcfcf,610px 0 0 -5px #cfcfcf,611px 0 0 -5px #cfcfcf,612px 0 0 -5px #cfcfcf,613px 0 0 -5px #cfcfcf,614px 0 0 -5px #cfcfcf,615px 0 0 -5px #cfcfcf,616px 0 0 -5px #cfcfcf,617px 0 0 -5px #cfcfcf,618px 0 0 -5px #cfcfcf,619px 0 0 -5px #cfcfcf,620px 0 0 -5px #cfcfcf,621px 0 0 -5px #cfcfcf,622px 0 0 -5px #cfcfcf,623px 0 0 -5px #cfcfcf,624px 0 0 -5px #cfcfcf,625px 0 0 -5px #cfcfcf,626px 0 0 -5px #cfcfcf,627px 0 0 -5px #cfcfcf,628px 0 0 -5px #cfcfcf,629px 0 0 -5px #cfcfcf,630px 0 0 -5px #cfcfcf,631px 0 0 -5px #cfcfcf,632px 0 0 -5px #cfcfcf,633px 0 0 -5px #cfcfcf,634px 0 0 -5px #cfcfcf,635px 0 0 -5px #cfcfcf,636px 0 0 -5px #cfcfcf,637px 0 0 -5px #cfcfcf,638px 0 0 -5px #cfcfcf,639px 0 0 -5px #cfcfcf,640px 0 0 -5px #cfcfcf,641px 0 0 -5px #cfcfcf,642px 0 0 -5px #cfcfcf,643px 0 0 -5px #cfcfcf,644px 0 0 -5px #cfcfcf,645px 0 0 -5px #cfcfcf,646px 0 0 -5px #cfcfcf,647px 0 0 -5px #cfcfcf,648px 0 0 -5px #cfcfcf,649px 0 0 -5px #cfcfcf,650px 0 0 -5px #cfcfcf,651px 0 0 -5px #cfcfcf,652px 0 0 -5px #cfcfcf,653px 0 0 -5px #cfcfcf,654px 0 0 -5px #cfcfcf,655px 0 0 -5px #cfcfcf,656px 0 0 -5px #cfcfcf,657px 0 0 -5px #cfcfcf,658px 0 0 -5px #cfcfcf,659px 0 0 -5px #cfcfcf,660px 0 0 -5px #cfcfcf,661px 0 0 -5px #cfcfcf,662px 0 0 -5px #cfcfcf,663px 0 0 -5px #cfcfcf,664px 0 0 -5px #cfcfcf,665px 0 0 -5px #cfcfcf,666px 0 0 -5px #cfcfcf,667px 0 0 -5px #cfcfcf,668px 0 0 -5px #cfcfcf,669px 0 0 -5px #cfcfcf,670px 0 0 -5px #cfcfcf,671px 0 0 -5px #cfcfcf,672px 0 0 -5px #cfcfcf,673px 0 0 -5px #cfcfcf,674px 0 0 -5px #cfcfcf,675px 0 0 -5px #cfcfcf,676px 0 0 -5px #cfcfcf,677px 0 0 -5px #cfcfcf,678px 0 0 -5px #cfcfcf,679px 0 0 -5px #cfcfcf,680px 0 0 -5px #cfcfcf,681px 0 0 -5px #cfcfcf,682px 0 0 -5px #cfcfcf,683px 0 0 -5px #cfcfcf,684px 0 0 -5px #cfcfcf,685px 0 0 -5px #cfcfcf,686px 0 0 -5px #cfcfcf,687px 0 0 -5px #cfcfcf,688px 0 0 -5px #cfcfcf,689px 0 0 -5px #cfcfcf,690px 0 0 -5px #cfcfcf,691px 0 0 -5px #cfcfcf,692px 0 0 -5px #cfcfcf,693px 0 0 -5px #cfcfcf,694px 0 0 -5px #cfcfcf,695px 0 0 -5px #cfcfcf,696px 0 0 -5px #cfcfcf,697px 0 0 -5px #cfcfcf,698px 0 0 -5px #cfcfcf,699px 0 0 -5px #cfcfcf,700px 0 0 -5px #cfcfcf,701px 0 0 -5px #cfcfcf,702px 0 0 -5px #cfcfcf,703px 0 0 -5px #cfcfcf,704px 0 0 -5px #cfcfcf,705px 0 0 -5px #cfcfcf,706px 0 0 -5px #cfcfcf,707px 0 0 -5px #cfcfcf,708px 0 0 -5px #cfcfcf,709px 0 0 -5px #cfcfcf,710px 0 0 -5px #cfcfcf,711px 0 0 -5px #cfcfcf,712px 0 0 -5px #cfcfcf,713px 0 0 -5px #cfcfcf,714px 0 0 -5px #cfcfcf,715px 0 0 -5px #cfcfcf,716px 0 0 -5px #cfcfcf,717px 0 0 -5px #cfcfcf,718px 0 0 -5px #cfcfcf,719px 0 0 -5px #cfcfcf,720px 0 0 -5px #cfcfcf,721px 0 0 -5px #cfcfcf,722px 0 0 -5px #cfcfcf,723px 0 0 -5px #cfcfcf,724px 0 0 -5px #cfcfcf,725px 0 0 -5px #cfcfcf,726px 0 0 -5px #cfcfcf,727px 0 0 -5px #cfcfcf,728px 0 0 -5px #cfcfcf,729px 0 0 -5px #cfcfcf,730px 0 0 -5px #cfcfcf,731px 0 0 -5px #cfcfcf,732px 0 0 -5px #cfcfcf,733px 0 0 -5px #cfcfcf,734px 0 0 -5px #cfcfcf,735px 0 0 -5px #cfcfcf,736px 0 0 -5px #cfcfcf,737px 0 0 -5px #cfcfcf,738px 0 0 -5px #cfcfcf,739px 0 0 -5px #cfcfcf,740px 0 0 -5px #cfcfcf,741px 0 0 -5px #cfcfcf,742px 0 0 -5px #cfcfcf,743px 0 0 -5px #cfcfcf,744px 0 0 -5px #cfcfcf,745px 0 0 -5px #cfcfcf,746px 0 0 -5px #cfcfcf,747px 0 0 -5px #cfcfcf,748px 0 0 -5px #cfcfcf,749px 0 0 -5px #cfcfcf,750px 0 0 -5px #cfcfcf,751px 0 0 -5px #cfcfcf,752px 0 0 -5px #cfcfcf,753px 0 0 -5px #cfcfcf,754px 0 0 -5px #cfcfcf,755px 0 0 -5px #cfcfcf,756px 0 0 -5px #cfcfcf,757px 0 0 -5px #cfcfcf,758px 0 0 -5px #cfcfcf,759px 0 0 -5px #cfcfcf,760px 0 0 -5px #cfcfcf,761px 0 0 -5px #cfcfcf,762px 0 0 -5px #cfcfcf,763px 0 0 -5px #cfcfcf,764px 0 0 -5px #cfcfcf,765px 0 0 -5px #cfcfcf,766px 0 0 -5px #cfcfcf,767px 0 0 -5px #cfcfcf,768px 0 0 -5px #cfcfcf,769px 0 0 -5px #cfcfcf,770px 0 0 -5px #cfcfcf,771px 0 0 -5px #cfcfcf,772px 0 0 -5px #cfcfcf,773px 0 0 -5px #cfcfcf,774px 0 0 -5px #cfcfcf,775px 0 0 -5px #cfcfcf,776px 0 0 -5px #cfcfcf,777px 0 0 -5px #cfcfcf,778px 0 0 -5px #cfcfcf,779px 0 0 -5px #cfcfcf,780px 0 0 -5px #cfcfcf,781px 0 0 -5px #cfcfcf,782px 0 0 -5px #cfcfcf,783px 0 0 -5px #cfcfcf,784px 0 0 -5px #cfcfcf,785px 0 0 -5px #cfcfcf,786px 0 0 -5px #cfcfcf,787px 0 0 -5px #cfcfcf,788px 0 0 -5px #cfcfcf,789px 0 0 -5px #cfcfcf,790px 0 0 -5px #cfcfcf,791px 0 0 -5px #cfcfcf,792px 0 0 -5px #cfcfcf,793px 0 0 -5px #cfcfcf,794px 0 0 -5px #cfcfcf,795px 0 0 -5px #cfcfcf,796px 0 0 -5px #cfcfcf,797px 0 0 -5px #cfcfcf,798px 0 0 -5px #cfcfcf,799px 0 0 -5px #cfcfcf,800px 0 0 -5px #cfcfcf,801px 0 0 -5px #cfcfcf,802px 0 0 -5px #cfcfcf,803px 0 0 -5px #cfcfcf,804px 0 0 -5px #cfcfcf,805px 0 0 -5px #cfcfcf,806px 0 0 -5px #cfcfcf,807px 0 0 -5px #cfcfcf,808px 0 0 -5px #cfcfcf,809px 0 0 -5px #cfcfcf,810px 0 0 -5px #cfcfcf,811px 0 0 -5px #cfcfcf,812px 0 0 -5px #cfcfcf,813px 0 0 -5px #cfcfcf,814px 0 0 -5px #cfcfcf,815px 0 0 -5px #cfcfcf,816px 0 0 -5px #cfcfcf,817px 0 0 -5px #cfcfcf,818px 0 0 -5px #cfcfcf,819px 0 0 -5px #cfcfcf,820px 0 0 -5px #cfcfcf,821px 0 0 -5px #cfcfcf,822px 0 0 -5px #cfcfcf,823px 0 0 -5px #cfcfcf,824px 0 0 -5px #cfcfcf,825px 0 0 -5px #cfcfcf,826px 0 0 -5px #cfcfcf,827px 0 0 -5px #cfcfcf,828px 0 0 -5px #cfcfcf,829px 0 0 -5px #cfcfcf,830px 0 0 -5px #cfcfcf,831px 0 0 -5px #cfcfcf,832px 0 0 -5px #cfcfcf,833px 0 0 -5px #cfcfcf,834px 0 0 -5px #cfcfcf,835px 0 0 -5px #cfcfcf,836px 0 0 -5px #cfcfcf,837px 0 0 -5px #cfcfcf,838px 0 0 -5px #cfcfcf,839px 0 0 -5px #cfcfcf,840px 0 0 -5px #cfcfcf,841px 0 0 -5px #cfcfcf,842px 0 0 -5px #cfcfcf,843px 0 0 -5px #cfcfcf,844px 0 0 -5px #cfcfcf,845px 0 0 -5px #cfcfcf,846px 0 0 -5px #cfcfcf,847px 0 0 -5px #cfcfcf,848px 0 0 -5px #cfcfcf,849px 0 0 -5px #cfcfcf,850px 0 0 -5px #cfcfcf,851px 0 0 -5px #cfcfcf,852px 0 0 -5px #cfcfcf,853px 0 0 -5px #cfcfcf,854px 0 0 -5px #cfcfcf,855px 0 0 -5px #cfcfcf,856px 0 0 -5px #cfcfcf,857px 0 0 -5px #cfcfcf,858px 0 0 -5px #cfcfcf,859px 0 0 -5px #cfcfcf,860px 0 0 -5px #cfcfcf,861px 0 0 -5px #cfcfcf,862px 0 0 -5px #cfcfcf,863px 0 0 -5px #cfcfcf,864px 0 0 -5px #cfcfcf,865px 0 0 -5px #cfcfcf,866px 0 0 -5px #cfcfcf,867px 0 0 -5px #cfcfcf,868px 0 0 -5px #cfcfcf,869px 0 0 -5px #cfcfcf,870px 0 0 -5px #cfcfcf,871px 0 0 -5px #cfcfcf,872px 0 0 -5px #cfcfcf,873px 0 0 -5px #cfcfcf,874px 0 0 -5px #cfcfcf,875px 0 0 -5px #cfcfcf,876px 0 0 -5px #cfcfcf,877px 0 0 -5px #cfcfcf,878px 0 0 -5px #cfcfcf,879px 0 0 -5px #cfcfcf,880px 0 0 -5px #cfcfcf,881px 0 0 -5px #cfcfcf,882px 0 0 -5px #cfcfcf,883px 0 0 -5px #cfcfcf,884px 0 0 -5px #cfcfcf,885px 0 0 -5px #cfcfcf,886px 0 0 -5px #cfcfcf,887px 0 0 -5px #cfcfcf,888px 0 0 -5px #cfcfcf,889px 0 0 -5px #cfcfcf,890px 0 0 -5px #cfcfcf,891px 0 0 -5px #cfcfcf,892px 0 0 -5px #cfcfcf,893px 0 0 -5px #cfcfcf,894px 0 0 -5px #cfcfcf,895px 0 0 -5px #cfcfcf,896px 0 0 -5px #cfcfcf,897px 0 0 -5px #cfcfcf,898px 0 0 -5px #cfcfcf,899px 0 0 -5px #cfcfcf,900px 0 0 -5px #cfcfcf,901px 0 0 -5px #cfcfcf,902px 0 0 -5px #cfcfcf,903px 0 0 -5px #cfcfcf,904px 0 0 -5px #cfcfcf,905px 0 0 -5px #cfcfcf,906px 0 0 -5px #cfcfcf,907px 0 0 -5px #cfcfcf,908px 0 0 -5px #cfcfcf,909px 0 0 -5px #cfcfcf,910px 0 0 -5px #cfcfcf,911px 0 0 -5px #cfcfcf,912px 0 0 -5px #cfcfcf,913px 0 0 -5px #cfcfcf,914px 0 0 -5px #cfcfcf,915px 0 0 -5px #cfcfcf,916px 0 0 -5px #cfcfcf,917px 0 0 -5px #cfcfcf,918px 0 0 -5px #cfcfcf,919px 0 0 -5px #cfcfcf,920px 0 0 -5px #cfcfcf,921px 0 0 -5px #cfcfcf,922px 0 0 -5px #cfcfcf,923px 0 0 -5px #cfcfcf,924px 0 0 -5px #cfcfcf,925px 0 0 -5px #cfcfcf,926px 0 0 -5px #cfcfcf,927px 0 0 -5px #cfcfcf,928px 0 0 -5px #cfcfcf,929px 0 0 -5px #cfcfcf,930px 0 0 -5px #cfcfcf,931px 0 0 -5px #cfcfcf,932px 0 0 -5px #cfcfcf,933px 0 0 -5px #cfcfcf,934px 0 0 -5px #cfcfcf,935px 0 0 -5px #cfcfcf,936px 0 0 -5px #cfcfcf,937px 0 0 -5px #cfcfcf,938px 0 0 -5px #cfcfcf,939px 0 0 -5px #cfcfcf,940px 0 0 -5px #cfcfcf,941px 0 0 -5px #cfcfcf,942px 0 0 -5px #cfcfcf,943px 0 0 -5px #cfcfcf,944px 0 0 -5px #cfcfcf,945px 0 0 -5px #cfcfcf,946px 0 0 -5px #cfcfcf,947px 0 0 -5px #cfcfcf,948px 0 0 -5px #cfcfcf,949px 0 0 -5px #cfcfcf,950px 0 0 -5px #cfcfcf,951px 0 0 -5px #cfcfcf,952px 0 0 -5px #cfcfcf,953px 0 0 -5px #cfcfcf,954px 0 0 -5px #cfcfcf,955px 0 0 -5px #cfcfcf,956px 0 0 -5px #cfcfcf,957px 0 0 -5px #cfcfcf,958px 0 0 -5px #cfcfcf,959px 0 0 -5px #cfcfcf,960px 0 0 -5px #cfcfcf,961px 0 0 -5px #cfcfcf,962px 0 0 -5px #cfcfcf,963px 0 0 -5px #cfcfcf,964px 0 0 -5px #cfcfcf,965px 0 0 -5px #cfcfcf,966px 0 0 -5px #cfcfcf,967px 0 0 -5px #cfcfcf,968px 0 0 -5px #cfcfcf,969px 0 0 -5px #cfcfcf,970px 0 0 -5px #cfcfcf,971px 0 0 -5px #cfcfcf,972px 0 0 -5px #cfcfcf,973px 0 0 -5px #cfcfcf,974px 0 0 -5px #cfcfcf,975px 0 0 -5px #cfcfcf,976px 0 0 -5px #cfcfcf,977px 0 0 -5px #cfcfcf,978px 0 0 -5px #cfcfcf,979px 0 0 -5px #cfcfcf,980px 0 0 -5px #cfcfcf,981px 0 0 -5px #cfcfcf,982px 0 0 -5px #cfcfcf,983px 0 0 -5px #cfcfcf,984px 0 0 -5px #cfcfcf,985px 0 0 -5px #cfcfcf,986px 0 0 -5px #cfcfcf,987px 0 0 -5px #cfcfcf,988px 0 0 -5px #cfcfcf,989px 0 0 -5px #cfcfcf,990px 0 0 -5px #cfcfcf,991px 0 0 -5px #cfcfcf,992px 0 0 -5px #cfcfcf,993px 0 0 -5px #cfcfcf,994px 0 0 -5px #cfcfcf,995px 0 0 -5px #cfcfcf,996px 0 0 -5px #cfcfcf,997px 0 0 -5px #cfcfcf,998px 0 0 -5px #cfcfcf,999px 0 0 -5px #cfcfcf,1000px 0 0 -5px #cfcfcf;transition:background-color 150ms}.hs-input-range__slider::-moz-range-track,.hs-input-range__slider::-moz-range-progress{width:100%;height:30px;background:linear-gradient(to bottom, #cfcfcf,#cfcfcf) 100% 50%/100% 3px no-repeat transparent}.hs-input-range__slider::-moz-range-progress{background:linear-gradient(to bottom, #0199ff,#0199ff) 100% 50%/100% 3px no-repeat transparent}.hs-input-range__slider::-moz-range-thumb{appearance:none;margin:0;height:13px;width:13px;background:#0199ff;border-radius:100%;border:0;transition:background-color 150ms}.hs-input-range__slider::-ms-track{width:100%;height:30px;border:0;color:transparent;background:transparent}.hs-input-range__slider::-ms-fill-lower{background:linear-gradient(to bottom, #0199ff,#0199ff) 100% 50%/100% 3px no-repeat transparent}.hs-input-range__slider::-ms-fill-upper{background:linear-gradient(to bottom, #cfcfcf,#cfcfcf) 100% 50%/100% 3px no-repeat transparent}.hs-input-range__slider::-ms-thumb{appearance:none;height:13px;width:13px;background:#0199ff;border-radius:100%;border:0;transition:background-color 150ms;top:0;margin:0;box-shadow:none}.hs-input-range__slider:hover::-webkit-slider-thumb,.hs-input-range__slider:focus::-webkit-slider-thumb{background-color:#55c2ff}.hs-input-range__slider:hover::-moz-range-thumb,.hs-input-range__slider:focus::-moz-range-thumb{background-color:#55c2ff}.hs-input-range__slider:hover::-ms-thumb,.hs-input-range__slider:focus::-ms-thumb{background-color:#55c2ff}.hs-input-rating__container{width:95%;margin-bottom:30px;display:table;table-layout:fixed}.hs-input-rating__container section{display:table-row}.hs-input-rating__label{position:relative;display:table-cell;vertical-align:middle;text-align:center}.hs-input-rating__label input,.hs-input-rating__label svg{position:absolute;top:20px;left:0;right:0;margin-left:auto;margin-right:auto;display:block;cursor:pointer}.hs-input-rating__label svg{position:absolute;width:45px;height:45px;fill:#fff;stroke:#ccc;transform:scale(0.6);transition:transform 200ms ease-in-out}.hs-input-rating__label path{transition:fill 200ms ease-in-out,stroke 100ms ease-in-out}.hs-input-rating__is-star input{display:none}.hs-input-rating__svg-is-selected{transform:scale(0.7)}.hs-input-rating__svg-is-selected path{fill:#f7e31b;stroke:#d7c508}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 .hs-richtext{word-break:break-word}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42.submitted-message{overflow:auto}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 fieldset{border:0;padding:0;margin:0;max-width:500px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 fieldset.form-columns-1 .hs-input{width:95%}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 fieldset.form-columns-1 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 fieldset.form-columns-1 input[type="checkbox"],.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 fieldset.form-columns-1 input[type="radio"]{width:auto}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 fieldset.form-columns-2 .hs-form-field{width:50%;float:left}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 fieldset.form-columns-2 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 fieldset.form-columns-3 .hs-form-field{width:32.7%;float:left}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 fieldset.form-columns-3 .input{margin-right:8px}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 label.hs-hidden{visibility:hidden}.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42 .hs-field-desc{width:100%}.hs-custom-style fieldset,.hs-custom-style .hs-input{max-width:100%}.hs-custom-style fieldset.form-columns-3 .hs-form-field,.hs-custom-style>div.form-columns-3 .hs-form-field{width:33.3%}.hs-custom-style fieldset>div:last-of-type .hs-input:not([type=checkbox]):not([type=radio]),.hs-custom-style>div>div:last-of-type .hs-input:not([type=checkbox]):not([type=radio]){width:100%;max-width:100%}.hs-custom-style fieldset input:not([type="image"]):not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]):not([type="file"]),.hs-custom-style>div input:not([type="image"]):not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]):not([type="file"]){box-sizing:border-box;padding:0 15px;min-height:27px}.hs-custom-style .hs-dependent-field>div .hs-input:not([type=checkbox]):not([type=radio]){width:100%}@media (max-width: 400px), (min-device-width: 320px) and (max-device-width: 480px){.hs-custom-style fieldset,.hs-custom-style .hs-input:not([type=checkbox]):not([type=radio]){margin-right:0 !important;width:100% !important}form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42:not(.hs-video-form) .form-columns-2 .hs-form-field,form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42:not(.hs-video-form) .form-columns-3 .hs-form-field{float:none;width:100%}form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42:not(.hs-video-form) .form-columns-2 .hs-form-field .hs-input,form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42:not(.hs-video-form) .form-columns-3 .hs-form-field .hs-input{width:95%}form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42:not(.hs-video-form) .form-columns-2 .hs-form-field input[type="checkbox"],form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42:not(.hs-video-form) .form-columns-2 .hs-form-field input[type="radio"],form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42:not(.hs-video-form) .form-columns-3 .hs-form-field input[type="checkbox"],form.hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42:not(.hs-video-form) .form-columns-3 .hs-form-field input[type="radio"]{width:auto}}.legal-consent-container .field.hs-form-field{margin-bottom:8px}.legal-consent-container .hs-field-desc.checkbox-desc{margin:-12px 0 0 21px}.legal-consent-container .hs-form-booleancheckbox-display input{float:left}.legal-consent-container .hs-form-booleancheckbox-display>span{display:block;margin-left:20px}.legal-consent-container .hs-form-booleancheckbox-display p{margin:0;display:inline}.legal-consent-container .hs-error-msgs label{color:#f2545b}.legal-consent-container ~ .hs_recaptcha{margin-top:18px}.cookie-reset-container{font-size:14px;margin-bottom:10px;text-align:right}#hs-outer-captcha-target,#hs-outer-captcha-target *{display:none;height:0;width:0}.hubspot-link__container{font-size:14px;padding-bottom:40px;position:relative;color:#9fa0a2;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.hubspot-link-text{color:#00a4bd;font-weight:400}.hubspot-link__container.sproket{color:#9fa0a2}.hubspot-link{text-decoration:none;color:#9fa0a2}.hubspot-link:hover{text-decoration:none}.hubspot-link:hover .hubspot-link-text{text-decoration:underline}.hubspot-link__icon{margin-bottom:-1px;margin-right:5px}.hubspot-link__container.sproket .hubspot-link__icon{width:30px;margin-right:0px;float:left;margin-top:-9px;margin-left:-5px}</style></head>
+
+  <body id="learn" class="layout-default no-type tutorials-view no-touch" ontouchstart="">
+
+    <div class="wrapper" itemscope="" itemtype="http://schema.org/WebSite">
+      <meta itemprop="url" content="https://learn.sparkfun.com/">
+      <div class="wrapper-inner">
+
+    
+<div class="header">
+  <div class="container">
+
+    <!-- Mobile Nav Button -->
+    <div class="mobile-menu-container left">
+      <a id="nav_toggle" class="mobile-menu-button nav_toggle" href="#" aria-expanded="false"><span class="sfe-icon-hamburger"></span></a>
+              <a id="search_toggle" class="mobile-menu-button" href="#"><span class="glyphicon glyphicon-search"></span></a>
+          </div>
+
+    <nav class="top-links">
+      <ul>
+        <li>
+          <a href="https://www.sparkfun.com/distributors">Find a Retailer</a>        </li>
+                  <li>
+            <div class="dropdown">
+              <a href="#" id="phone_hours" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                Need Help?
+                <span class="caret"></span>
+              </a>
+              <div class="dropdown-menu pull-right need-help" role="menu" aria-labelledby="phone_hours">
+                <h4>Customer Service</h4>
+                <p><a href="https://www.sparkfun.com/orders/"><span class="glyphicon glyphicon-dashboard"></span> Track My Order</a></p>
+                <p><a href="https://www.sparkfun.com/support"><span class="glyphicon glyphicon-question-sign"></span> Frequently Asked Questions</a></p>
+                <p><a href="https://www.sparkfun.com/support#InternationalShipping"><span class="glyphicon glyphicon-globe"></span> International Shipping Info</a></p>
+                <p><a href="mailto:support@sparkfun.com"><span class="glyphicon glyphicon-envelope"></span> Send Email</a></p>
+                <p class="small text-muted">
+                  Mon-Fri, 9am to 12pm and<br>
+                  1pm to 5pm U.S. Mountain Time:
+                </p>
+                <p><span class="glyphicon glyphicon-earphone"></span> (303) 284-0979</p>
+                                  <p><a data-toggle="chatpopup" href="https://www.sparkfun.com/chat/popup"><span class="glyphicon glyphicon-comment"></span> Chat With Us</a></p>
+                              </div>
+            </div>
+          </li>
+              </ul>
+    </nav>
+
+    <!-- Logo -->
+    <div class="logo-container">
+      <a class="logo" href="https://www.sparkfun.com/">
+        <span class="sfe-icon-flame"></span>
+        <span class="sfe-icon-sparkfun" data-icon="🔥">
+          <span class="visuallyhidden">sparkfun.com</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- Tabs -->
+    <!-- also edit mobile tabs in .tabs-container-mobile -->
+    <nav class="tabs-container hidden-xs">
+      <ul>
+        <li class="shop "><a href="https://www.sparkfun.com/categories">Shop</a></li>
+        <li class="learn active"><a href="https://learn.sparkfun.com/">Learn</a></li>
+        <li class="blog "><a href="https://www.sparkfun.com/news">Blog</a></li>
+        <li class="support "><a href="https://www.sparkfun.com/support">Support</a></li>
+      </ul>
+    </nav>
+
+    <!-- Cart & User -->
+    <div class="user-container mobile-menu-container right">
+
+      <a id="account_toggle" class="mobile-menu-button" href="#"><span class="glyphicon glyphicon-user"></span></a>
+
+              <div class="cart mobile-menu-button">
+          <a href="https://www.sparkfun.com/cart">
+            <span id="cart_status" class="sfe-icon-carticon cart-empty">
+              <span class="visuallyhidden">Shopping Cart</span>
+            </span>
+            <span class="cart_count">
+              <span id="items_in_cart">0</span>
+              <span id="cart_noun" class="visuallyhidden">items</span>
+            </span>
+          </a>
+        </div>
+      
+              <div class="user">
+          <!-- login modal trigger -->
+          <a class="btn btn-default" href="https://www.sparkfun.com/account/login?redirect=%2Flearn%2Ftutorials%2Fsunny-buddy-solar-charger-v13-hookup-guide-%2Fall" data-toggle="modal" data-target="#login_modal" data-remote="false">log in</a>
+          <a class="btn btn-default" href="https://www.sparkfun.com/account/make">register</a>        </div>
+      
+    </div>
+
+    <nav class="tabs-container-mobile visible-xs col-xs-12">
+      <ul>
+        <li class="shop "><a href="https://www.sparkfun.com/categories">Shop</a></li>
+        <li class="learn active"><a href="https://learn.sparkfun.com/">Learn</a></li>
+        <li class="blog "><a href="https://www.sparkfun.com/news">Blog</a></li>
+        <li class="support "><a href="https://www.sparkfun.com/support">Support</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- Navigation / Search -->
+  <div class="main-nav-container">
+
+    <div class="container">
+
+      <nav class="product-nav">
+        <button type="button" class="product-menu" aria-expanded="false">
+          <span class="menu-icon sfe-icon-hamburger"></span>
+          <span class="product-menu-name">Product Menu</span>
+        </button>
+
+                  <form id="search_form" class="search" action="https://www.sparkfun.com/search/results" method="get" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+            <meta itemprop="target" content="https://www.sparkfun.com/search/results?term={term}">
+            <div class="ui-widget">
+              <input name="term" id="global-search" class="form-control ui-autocomplete-input" type="text" placeholder="find products, tutorials, etc..." itemprop="query-input" autocomplete="off">
+              <button type="submit" class="glyphicon glyphicon-search global-search-icon" aria-label="Search"></button>
+            </div>
+          </form>
+              </nav>
+
+      <nav class="sub-nav">
+        <ul>
+          <li>
+            <a href="https://www.sparkfun.com/sparkx"><span class="sfe-icon-sparkx"></span></a>          </li>
+          <li>
+            <a href="http://www.sparkfuneducation.com/" target="_blank">Education</a>
+          </li>
+          <li class="hidden-sm">
+            <a href="https://avc.sparkfun.com/"><span class="sfe-icon-avc"></span></a>          </li>
+          <li>
+            <a href="https://forum.sparkfun.com/" target="_blank">Forum</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="product-menu-container" tabindex="-1" aria-hidden="true">
+      <div class="container">
+
+        <div class="fixed-product-menu-container col-lg-2 col-sm-3 col-xs-12">
+          <div class="sub-nav-mobile product-menu-group">
+            <a class="product-menu-heading desktop-toggle" href="https://www.sparkfun.com/account/mobile_toggle?redirect=%2Flearn%2Ftutorials%2Fsunny-buddy-solar-charger-v13-hookup-guide-%2Fall">Desktop Site</a>            <a class="product-menu-heading" href="https://www.sparkfun.com/sparkx"><span class="sfe-icon-sparkx"></span></a>            <a class="product-menu-heading" href="http://www.sparkfuneducation.com/" target="_blank">Education</a>
+            <a class="product-menu-heading" href="https://avc.sparkfun.com/"><span class="sfe-icon-avc"></span></a>            <ul class="list-unstyled">
+            </ul>
+          </div>
+          <div class="product-menu-group">
+            <a class="product-menu-heading" href="https://www.sparkfun.com/categories">All Categories</a>            <ul class="list-unstyled">
+            </ul>
+          </div>
+          <div class="product-menu-group">
+            <a class="product-menu-heading" href="https://www.sparkfun.com/categories/featured">Featured <span class="visible-xs pull-right glyphicon glyphicon-plus"></span></a>            <ul class="list-unstyled">
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/new_products">New Products</a></li>
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/top"><span class="sfe-icon-flame"></span> Top Sellers</a></li>
+                            <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/283"><span class="sfe-icon-sparkx"></span></a></li>
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/categories/sale">Sale</a></li>
+              <li><a class="product-menu-item" href="https://www.sparkfun.com/gift_certificates">Gift Certificates</a></li>
+            </ul>
+          </div>
+                      <a href="https://www.sparkfun.com/top_electronics_kits_for_beginners" class="hidden-xs">
+              <img class="img-responsive img-rounded center-block" src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/top-kits.jpg" alt="Top Electronics Kits for Beginners">
+            </a>
+                  </div>
+
+                              <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/287" class="product-menu-heading">
+                 Brands                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/featured" class="product-menu-item">
+                                              <span class="product-menu-item-icon sfe-icon-flame" style="color:#ee2e22"></span> SparkFun                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/103" class="product-menu-item">
+                                              <span class="product-menu-item-icon sfe-icon-arduino" style="color:#00878f"></span> Arduino                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/233" class="product-menu-item">
+                                              <span class="product-menu-item-icon sfe-icon-rpi-multi-color" style="color:#ffffff"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> Raspberry Pi                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/qwiic" class="product-menu-item">
+                                              <span class="product-menu-item-icon sfe-icon-qwiic" style="color:#ffffff"></span> Qwiic                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/284" class="product-menu-item">
+                                               micro:bit                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/287" class="product-menu-item">
+                                               <small>all brands</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/2" class="product-menu-heading">
+                 Development                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/299" class="product-menu-item">
+                                               Single Board Comp.                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/300" class="product-menu-item">
+                                               Microcontrollers                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/419" class="product-menu-item">
+                                               Machine Learning                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/136" class="product-menu-item">
+                                               FPGA                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/149" class="product-menu-item">
+                                               Prototyping Boards                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/2" class="product-menu-item">
+                                               <small>all development</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/23" class="product-menu-heading">
+                 Sensors                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/304" class="product-menu-item">
+                                               Movement                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/146" class="product-menu-item">
+                                               Biometrics                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/102" class="product-menu-item">
+                                               Imaging                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/305" class="product-menu-item">
+                                               Environment                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/117" class="product-menu-item">
+                                               Capacitive                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/23" class="product-menu-item">
+                                               <small>all sensors</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/46" class="product-menu-heading">
+                 Tools                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/271" class="product-menu-item">
+                                               3D Printing                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/280" class="product-menu-item">
+                                               CNC                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/49" class="product-menu-item">
+                                               Soldering                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/47" class="product-menu-item">
+                                               Hand Tools                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/177" class="product-menu-item">
+                                               Instruments                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/46" class="product-menu-item">
+                                               <small>all tools</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/310" class="product-menu-heading">
+                 Miscellaneous                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/157" class="product-menu-item">
+                                               All Kits                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/176" class="product-menu-item">
+                                               Books                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/311" class="product-menu-item">
+                                               Arts/Crafts Supplies                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/351" class="product-menu-item">
+                                               SD Cards                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/130" class="product-menu-item">
+                                               Swag                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/310" class="product-menu-item">
+                                               <small>all misc</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/51" class="product-menu-heading">
+                 Components                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/89" class="product-menu-item">
+                                               LED &amp; Illumination                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/145" class="product-menu-item">
+                                               Buttons &amp; Switches                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/76" class="product-menu-item">
+                                               LCDs &amp; OLEDs                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/28" class="product-menu-item">
+                                               Power                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/70" class="product-menu-item">
+                                               Cables &amp; Wire                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/51" class="product-menu-item">
+                                               <small>all components</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/204" class="product-menu-heading">
+                 E-Textiles                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/327" class="product-menu-item">
+                                               LilyPad                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/328" class="product-menu-item">
+                                               Sewable Electronics                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/206" class="product-menu-item">
+                                               Materials                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/268" class="product-menu-item">
+                                               E-Textile Power                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/329" class="product-menu-item">
+                                               E-Textile Kits                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/204" class="product-menu-item">
+                                               <small>all e-textiles</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/31" class="product-menu-heading">
+                 Robotics                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/pages/Actobotics" class="product-menu-item">
+                                               Actobotics                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/178" class="product-menu-item">
+                                               Motors &amp; Drivers                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/330" class="product-menu-item">
+                                               Parts                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/155" class="product-menu-item">
+                                               Hardware                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/181" class="product-menu-item">
+                                               Robotics Kits                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/31" class="product-menu-item">
+                                               <small>all robotics</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/16" class="product-menu-heading">
+                 Wireless &amp; IoT                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/115" class="product-menu-item">
+                                               Bluetooth                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/112" class="product-menu-item">
+                                               WiFi                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/338" class="product-menu-item">
+                                               Satellite                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/4" class="product-menu-item">
+                                               GPS &amp; GNSS                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/339" class="product-menu-item">
+                                               Wireless Kits                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/16" class="product-menu-item">
+                                               <small>all wireless/IoT</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                      <div class="product-menu-group col-lg-2 col-sm-3 col-xs-12">
+              <a href="https://www.sparkfun.com/categories/273" class="product-menu-heading">
+                 Audio                <span class="visible-xs pull-right glyphicon glyphicon-plus"></span>
+              </a>
+              <ul class="list-unstyled">
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/343" class="product-menu-item">
+                                               Audio Boards                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/342" class="product-menu-item">
+                                               Audio Cables                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/344" class="product-menu-item">
+                                               Speakers                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/345" class="product-menu-item">
+                                               Audio Chips                                          </a>
+                  </li>
+                                  <li>
+                    <a href="https://www.sparkfun.com/categories/273" class="product-menu-item">
+                                               <small>all audio</small>
+                                          </a>
+                  </li>
+                              </ul>
+            </div>
+                  
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    
+    <div class="content">
+      <div class="container" id="airlock">
+
+        
+        <div class="main-title">
+  <ul class="breadcrumb">
+    <li><a href="https://learn.sparkfun.com/">Home</a></li>
+    <li><a href="https://learn.sparkfun.com/tutorials">Tutorials</a></li>
+    <li>Sunny Buddy Solar Charger V13 Hookup Guide </li>
+      </ul>
+
+  <h1>
+    Sunny Buddy Solar Charger V13 Hookup Guide   </h1>
+
+</div>
+
+
+<a id="nav_toggle_pages" class="nav_toggle nav-toggle-trigger" href="#"><span>≡</span> Pages</a>
+
+<div id="tutorial" class="row">
+
+  <div class="col-sm-8" id="sections">
+
+    <div class="contributors">
+                      Contributors:
+                <a href="https://www.sparkfun.com/users/236377"><img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/f4e195a7becacb6d86238db8c87e90f0.png"> SFUptownMaker</a>          </div>
+
+    <span class="fave_widget verbose">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="313">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">13</span>
+</span>    <div class="share-link-inline">
+
+  <a class="share-link-toggle" href="#">
+    <span class="share-title">
+      <span class="sfe-icon-share"></span>
+      Share    </span>
+  </a>
+
+  <div class="share-link-inner dialog">
+    Use this URL to share:<br>
+    <input class="form-control input-sm" type="text" value="http://sfe.io/t313" onclick="$(this).trigger('select');">
+
+    <div class="share-social">
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','googleplus');" href="https://plus.google.com/share?url=http%3A%2F%2Fsfe.io%2Ft313" title="Share on Google+"><span class="sfe-icon-google-plus hidetext"><span>Share on Google+</span></span></a>
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','tumblr');" href="https://www.tumblr.com/share/link?url=http%3A%2F%2Fsfe.io%2Ft313&amp;name=Sunny+Buddy+Solar+Charger+V13+Hookup+Guide+" title="Share on Tumblr"><span class="sfe-icon-tumblr hidetext"><span>Share on Tumblr</span></span></a>
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','reddit');" href="https://www.reddit.com/submit?url=http%3A%2F%2Fsfe.io%2Ft313" title="Submit to reddit"><span class="sfe-icon-reddit hidetext"><span>Submit to reddi</span></span></a>
+
+    </div>
+
+    </div>
+  
+  <div class="share-social">
+
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','twitter');" href="https://twitter.com/intent/tweet?text=Sunny+Buddy+Solar+Charger+V13+Hookup+Guide+&amp;url=http%3A%2F%2Fsfe.io%2Ft313&amp;via=sparkfun" title="Share on Twitter"><span class="sfe-icon-twitter hidetext"><span>Share on Twitter</span></span></a>
+
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','facebook');" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fsfe.io%2Ft313&amp;t=Sunny+Buddy+Solar+Charger+V13+Hookup+Guide+" title="Share on Facebook"><span class="sfe-icon-facebook-nobox hidetext"><span>Share on Facebook</span></span></a>
+
+          <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','pinterest');" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fsfe.io%2Ft313&amp;media=https%3A%2F%2Fcdn.sparkfun.com%2F%2Fr%2F500-1000%2Fassets%2Flearn_tutorials%2F3%2F1%2F3%2Fdefault.jpg&amp;description=Sunny+Buddy+Solar+Charger+V13+Hookup+Guide+" title="Pin It"><span class="sfe-icon-pinterest hidetext"><span>Pin It</span></span></a>
+    
+  </div>
+
+  
+</div>
+
+          <div class="section tutorial-page">
+        <h2 id="introduction">Introduction</h2>
+        <div class="well">
+  <strong>Heads up!</strong> If you have an older version of the Sunny Buddy (<a href="https://www.sparkfun.com/products/12084">V1.0</a> and older), please refer to <a href="https://learn.sparkfun.com/tutorials/sunny-buddy-solar-charger-v13-hookup-guide-/tutorials/170">this hookup guide</a>. For V1.3 and beyond, continue reading. Check the back of the board for the version number. 
+</div>
+
+<hr>
+
+<p>The <a href="https://www.sparkfun.com/products/12885">Sunny Buddy</a> is a small maximum power point tracking solar charger for single-cell LiPo batteries.</p>
+
+<!-- <div class="center-block text-center"> [![Product pic](https://cdn.sparkfun.com/assets/learn_tutorials/3/1/3/default.jpg)](https://cdn.sparkfun.com/assets/learn_tutorials/3/1/3/default.jpg) </div> -->
+
+
+
+<div>
+<div class="tile product-tile has_addl_actions big grid " data-id="12885" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/12885">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/12885-01.jpg" alt="SparkFun Sunny Buddy - MPPT Solar Charger" height="500">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="12885">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$qDS2TiqCrKf6eBHk1xg6a.SDLZtnajT83/SkCidjQwAbxS2mPIuO6">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_12885" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_12885 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_12885"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/12885">
+          <span>SparkFun Sunny Buddy - MPPT Solar Charger</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-12885    </span>
+
+          <p class="description" style="display:none">
+        This is the Sunny Buddy, a maximum power point tracking (MPPT) 
+solar charger for single-cell LiPo batteries. This MPPT solar …      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="26.95">26.95</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="4.4 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-half" data-star-index="4"></span>
+  </span>
+      <span class="count">7</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="12885">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">50</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="12885" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+</div>
+
+
+
+
+<p>This tutorial will help you understand what the Sunny Buddy is, why it's useful, and how to use it.</p>
+
+<h3>Required Materials</h3>
+
+<p>The Sunny Buddy can't do anything without a supporting cast. Pair the Sunny Buddy with these buddies to make it work:</p>
+
+<ul>
+<li><p><strong>Solar Panel</strong> -- Most panels should work, just make sure they produce an output voltage between <strong>6-20V</strong>. Our <a href="https://www.sparkfun.com/products/7840">large</a> and <a href="https://www.sparkfun.com/products/9241">huge</a> panels will work. Our  <a href="https://www.sparkfun.com/products/7845">small</a>
+ panels will work if you connect two of them in series (see the "Hooking
+ It Up" page for details). The following panels with a center-positive 
+barrel jack will be able to plug directly into the Sunny Buddy with 
+ease.</p>
+
+
+
+<div class="tile-wrap">
+<div class="tile product-tile has_addl_actions  grid " data-id="13782" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13782">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13782-01.jpg" alt="Solar Panel - 3.5W" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13782">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$hwYenUzv5JzdvuaaMIGFWeGI/0YXTbEFasA443JH2W.Ue8ZgTAAIm">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13782" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13782 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13782"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13782">
+          <span>Solar Panel - 3.5W</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13782    </span>
+
+          <p class="description" style="display:none">
+        Have a project that needs some good power? Do you like free 
+power provided by our friend, Mr. Sun? Check out this high qualit…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="39.00">39.00</span></span>
+        </span>
+      </div>
+    </div>
+  
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13782">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">13</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13782" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="13783" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13783">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13783-01.jpg" alt="Solar Panel - 6W" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13783">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$PK14hMP5JMeZxsBB1da1jeLLWENJdKFC.fK01MVU9ZBxHopLsG6hi">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13783" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13783 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13783"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13783">
+          <span>Solar Panel - 6W</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="20 available"><span class="sfe-icon-stock-low"><span class="visuallyhidden">20 available</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13783    </span>
+
+          <p class="description" style="display:none">
+        Have a project that needs some good power? Do you like free 
+power provided by our friend, Mr. Sun? Check out this high qualit…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="59.00">59.00</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="4.5 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-half" data-star-index="4"></span>
+  </span>
+      <span class="count">2</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13783">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">5</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13783" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="13784" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13784">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13784-01.jpg" alt="Solar Panel - 9W" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13784">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$D0NUKXh4XcbXTlymbaXtIurl5oGfHwfyjJIvWQpZb4YSjs3xdwCTq">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13784" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13784 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13784"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13784">
+          <span>Solar Panel - 9W</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="33 available"><span class="sfe-icon-stock-low"><span class="visuallyhidden">33 available</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13784    </span>
+
+          <p class="description" style="display:none">
+        Have a project that needs some good power? Do you like free 
+power provided by our friend, Mr. Sun? Check out this high qualit…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="79.00">79.00</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="4 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>
+  </span>
+      <span class="count">1</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13784">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">17</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13784" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+</div>
+
+  <div class="clearfix"></div>
+
+</li>
+</ul>
+
+<div class="alert alert-info" role="alert">
+  <strong>Heads up!</strong> Under real world conditions, the Sunny Buddy may not be able to charge a LiPo battery sufficiently with the <a href="https://www.sparkfun.com/products/13781">small 2W</a> solar panel. The Sunny Buddy's output charge current measured was about <i>7mA</i>
+ since the small 2W solar panel was not able to reach the minimum input 
+voltage requirements by itself. We recommend using a larger solar panel 
+like the <a href="https://www.sparkfun.com/products/13782">3.5W</a>, <a href="https://www.sparkfun.com/products/13783">6W</a>, or <a href="https://www.sparkfun.com/products/13784">9W</a> solar panels to achieve the Sunny Buddy's minimum voltage input requirements. 
+  </div>
+
+<!-- <div class="center-block text-center"> [![Solar Panel](https://cdn.sparkfun.com/r/400-400/assets/learn_tutorials/1/7/0/solar-panel.png)](https://cdn.sparkfun.com/assets/learn_tutorials/1/7/0/solar-panel.png) </div> -->
+
+<ul>
+<li><p><strong>LiPo Battery</strong> (single cell) -- The Sunny Buddy is
+ intended to charge a single Polymer Lithium Ion cell. LiPo's come in 
+all shapes and sizes, we recommend you use one with a capacity greater 
+than 450mAh (e.g. <a href="https://www.sparkfun.com/products/341">850mAh</a>, <a href="https://www.sparkfun.com/products/339">1000mAh</a>, or <a href="https://www.sparkfun.com/products/8483">2000mAh</a>).
+ Batteries like those, with a JST termination, will plug directly into 
+the Sunny Buddy. The 450mAh size suggestion is due to the charge rate of
+ the Sunny Buddy--most LiPo cells don't like being charged faster than 
+their equivalent capacity.</p>
+
+
+
+<div class="tile-wrap">
+<div class="tile product-tile has_addl_actions  grid " data-id="13855" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13855">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13855-01.jpg" alt="Lithium Ion Battery - 2Ah" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13855">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$JLkTyyFYfL79rQAXAQmGj.CIZ9F/aG9jGIQcOepeuC5/7HqATTJX2">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13855" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13855 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13855"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13855">
+          <span>Lithium Ion Battery - 2Ah</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13855    </span>
+
+          <p class="description" style="display:none">
+        These are very slim, extremely light weight batteries based on 
+Lithium Ion chemistry. Each cell outputs a nominal 3.7V at 200…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="12.95">12.95</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="4.5 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-half" data-star-index="4"></span>
+  </span>
+      <span class="count">6</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13855">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">21</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13855" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="13854" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13854">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13854-01.jpg" alt="Lithium Ion Battery - 850mAh" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13854">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$/Zle0p6vK9cxy1UlXcGKpeT3iuMFh0jkMMu6gbGaoMUlHNDsG7CPC">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13854" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13854 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13854"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13854">
+          <span>Lithium Ion Battery - 850mAh</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="only 6 left!"><span class="sfe-icon-stock-low"><span class="visuallyhidden">Only 6 left!</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13854    </span>
+
+          <p class="description" style="display:none">
+        These are very slim, extremely light weight batteries based on 
+Lithium Ion chemistry. Each cell outputs a nominal 3.7V at 850…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="9.95">9.95</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="3 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-empty" data-star-index="3"></span>
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>
+  </span>
+      <span class="count">2</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13854">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">7</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13854" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="13813" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13813">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13813-01.jpg" alt="Lithium Ion Battery - 1Ah" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13813">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$yk8SuNtU0qQpbw6MRnsCYeJGgc2CQdrMjAj15Qtkov0z8Rjj/7VEO">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13813" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13813 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13813"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13813">
+          <span>Lithium Ion Battery - 1Ah</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13813    </span>
+
+          <p class="description" style="display:none">
+        These are very slim, extremely light weight batteries based on 
+Lithium Ion chemistry. Each cell outputs a nominal 3.7V at 100…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="9.95">9.95</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="5 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-full" data-star-index="4"></span>
+  </span>
+      <span class="count">7</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13813">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">44</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13813" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="13856" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13856">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13856-01.jpg" alt="Lithium Ion Battery - 6Ah" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13856">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$spOzxaG84auTf2ftgJG1U.zQHADhd.0FPOq1jkv/S9qGA2NsoUmJ6">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13856" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13856 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13856"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13856">
+          <span>Lithium Ion Battery - 6Ah</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13856    </span>
+
+          <p class="description" style="display:none">
+        If you need some juice, this 6Ah Lithium Ion Battery is for you.
+ These are very compact batteries based on Lithium Ion chemis…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="29.95">29.95</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="3.7 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-half" data-star-index="3"></span>
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>
+  </span>
+      <span class="count">6</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13856">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">26</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13856" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+</div>
+
+  <div class="clearfix"></div>
+
+</li>
+</ul>
+
+<!-- <div class="center-block text-center"> [![A LiPo battery](https://cdn.sparkfun.com/r/400-400/assets/learn_tutorials/1/7/0/lipo-battery.png)](https://cdn.sparkfun.com/assets/learn_tutorials/1/7/0/lipo-battery.png) </div> -->
+
+<ul>
+<li><strong>A Load</strong> -- Your battery has to power <em>something</em>, right? Your load can be anything from an <a href="https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds">LED</a> to an <a href="https://learn.sparkfun.com/tutorials/getting-started-with-the-redbot">Arduino-powered robot</a>.</li>
+</ul>
+
+<h3>Suggested Reading</h3>
+
+<p>Here are some other tutorials you may find useful before delving into this hookup guide:</p>
+
+<ul>
+<li><a href="https://learn.sparkfun.com/tutorials/battery-technologies">Batteries</a> -- Check out the battery tutorial for some help understanding why the Sunny Buddy works only with LiPo batteries.</li>
+<li><a href="https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law">Electricity Basics</a> -- It may be useful to review how current and voltage combine to transmit power to a load.</li>
+<li><a href="https://learn.sparkfun.com/tutorials/how-to-power-a-project">How to Power Your Project</a> -- Solar power and batteries are just one of many ways to power your project. Make sure to consider all possibilities!</li>
+<li>
+<div class="tile-wrap">
+  <div class="tile tutorial-tile has_addl_actions  grid " data-id="27">
+
+  <a href="https://learn.sparkfun.com/tutorials/voltage-current-resistance-and-ohms-law">
+          <div class="thumb-wrap">
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/2/7/ohmThumb.jpg)"></div>
+      </div>
+    
+    
+    <h3 class="title">Voltage, Current, Resistance, and Ohm's Law</h3>
+      </a>
+
+      <div class="description">
+      Learn about Ohm's Law, one of the most fundamental equations in all electrical engineering.     </div>
+  
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="27">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">89</span>
+</span>  </div>
+
+</div>
+<div class="tile tutorial-tile has_addl_actions  grid " data-id="28">
+
+  <a href="https://learn.sparkfun.com/tutorials/battery-technologies">
+          <div class="thumb-wrap">
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/a/6/5/e/f/5114447cce395f697e000009.jpg)"></div>
+      </div>
+    
+    
+    <h3 class="title">Battery Technologies</h3>
+      </a>
+
+      <div class="description">
+      The basics behind the batteries used in portable electronic devices: LiPo, NiMH, coin cells, and alkaline.    </div>
+  
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="28">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">33</span>
+</span>  </div>
+
+</div>
+<div class="tile tutorial-tile has_addl_actions  grid " data-id="36">
+
+  <a href="https://learn.sparkfun.com/tutorials/how-to-power-a-project">
+          <div class="thumb-wrap">
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/264-148/assets/learn_tutorials/3/6/Bench_Power_Supply.jpg)"></div>
+      </div>
+    
+    
+    <h3 class="title">How to Power a Project</h3>
+      </a>
+
+      <div class="description">
+      A tutorial to help figure out the power requirements of your project.    </div>
+  
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="36">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">49</span>
+</span>  </div>
+
+</div>
+</div>
+
+  <div class="clearfix"></div>
+</li>
+</ul>      </div>
+          <div class="section tutorial-page">
+        <h2 id="why-mppt">Why MPPT?</h2>
+        <p>The Sunny Buddy is a maximum power point transfer (MPPT) 
+solar charger. Why does that matter? What makes it worth having in a 
+circuit? The answers lay ahead.</p>
+
+<h4>How Batteries Are Charged</h4>
+
+<p>Battery charging is a current dependent action, not a voltage 
+dependent action. Battery chargers monitor the current flowing into the 
+battery and limit it to some set value, chosen to prevent damage to the 
+battery. An ideal battery charger will provide as much current to the 
+battery as it is capable of drawing from its power supply, but no more 
+than the battery can handle.</p>
+
+<h4>Power Supply Behavior</h4>
+
+<p>Consider the first part of that last sentence: "as much current as it
+ is capable of drawing from its power supply." I've collected some data 
+from five different power supplies: a <a href="https://www.sparkfun.com/products/8483">2000 mAh LiPo battery</a>, a bench supply, our <a href="https://www.sparkfun.com/products/7845">small solar cell</a>, our <a href="https://www.sparkfun.com/products/7840">large solar cell</a>, and the Sunny Buddy attached to the small cell in full Colorado sunlight (albeit in midwinter).</p>
+
+<p>-&gt; <a href="https://cdn.sparkfun.com/assets/4/0/0/c/9/52e84215ce395fcf468b4568.png"><img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/52e84215ce395fcf468b4568.png" alt="Load testing results of various supplies"></a></p>
+
+<p></p><div class="center-block text-center"> <em>That's some mighty fine data!</em> </div><p></p>
+
+<p>The chart compares output voltage versus load current for the five 
+sources listed above: in short, how much current each is capable of 
+providing. For a sort of baseline comparison, note that the output of 
+the bench supply, the battery, and the Sunny Buddy are pretty flat. You 
+can clearly see the point at about 240mA where the Sunny Buddy could no 
+longer safely draw more current from the solar cell. In a charging 
+application, that's the point at which it would have settled in and 
+charged the battery. Since I was actively increasing the load to stress 
+the supplies, it folded back to a lower voltage to gracefully handle the
+ excessive load without bursting into flames.</p>
+
+<p>The solar cells, however, behave quite differently. They slowly droop
+ until they reach a certain point, then decline increasingly rapidly 
+until even a small increase in current draw causes the output voltage to
+ plummet. There's a point on that curve, in the "knee" region, where the
+ power transferred to the load is at its peak. This point, called the <strong>maximum power point</strong>, is crucial to squeezing the most efficiency out of a solar cell.</p>
+
+<p>Finding that point is the key here. The solar cell curves will be 
+compressed along the X-axis in lower light conditions, and, while the 
+unloaded voltage may remain quite high even in low light, the amount of 
+current which can be drawn from the cell decreases rapidly with the 
+amount of light available.</p>
+
+<p>The Sunny Buddy locks in on that point in the curve, pulling the 
+maximum current the cell will provide, but no more, and turning it into 
+charge current. The circled region of the graph shows this: the highest 
+current the small solar cell can deliver is around 180mA, but the Sunny 
+Buddy pushes out 240mA before entering current limit. That's an extra 
+33% more charge current available to your battery over a comparable 5V 
+charger.</p>
+
+<h4>Efficiency</h4>
+
+<p>Efficiency in any power supply system can be said to be the ratio of 
+power out to power in. This is another place where the Sunny Buddy is 
+better than comparable linear solutions.</p>
+
+<p>The Sunny Buddy is a switching supply; the output power is given by the equation <code>Pout = Pin * Efficiency</code>. The Sunny Buddy's efficiency has repeatedly measured to be about 80% in tests.</p>
+
+<p>Let's consider a linear solution. To avoid getting too far into that 
+steep region of the graph, we'll set our charge current at 160mA. To 
+calculate the output efficiency, we divided the output power by the 
+input power. Looking at the voltage on the solar cell curve, we see that
+ for 160mA the output voltage is about 7V; thus, input power is <code>7V * 160mA = 1142mW</code>. Output power is <code>4.2V * 160mA = 672mW</code>. That's the approximate charge voltage times the charge current. Efficiency is power in over power out: <code>672/1142 = 59%</code>.
+ Best case, that's the percentage of the electric power generated by the
+ cell that you're using. It will actually be lower when the cell voltage
+ is lower than 4.2V, which it will be over most of the charging range.</p>
+
+<p>Here, again, Sunny Buddy wins: it's using (at least) 20% more of the available power from the solar cell.</p>
+
+<h4>Cloudy Days</h4>
+
+<p>But what happens to our linear charge circuit when the sun goes 
+behind a cloud? As I mentioned earlier, as available solar energy 
+decreases, the graph compresses along the X-axis. If that steep region 
+drops below the set current of our charger, things go pear-shaped fast. 
+The available voltage plummets, and the charger stops working.</p>
+
+<p>We can combat that by either setting a lower charge current in the 
+first place, which isn't ideal because it means on a good, sunny day, 
+you're losing a lot of potential solar energy by not loading the solar 
+cell heavily enough, or by servoing our charge current to the voltage, 
+reducing or increasing it based on the cell voltage. While that may 
+sound simple, in practice it's quite complex.</p>
+
+<h4>Enter the Sunny Buddy</h4>
+
+<p>The Sunny Buddy does just that: it monitors the cell voltage and 
+stops drawing current when the voltage droop indicates the cell is being
+ pushed a little too far. Furthermore, since the Sunny Buddy uses a 
+switching topology rather than a linear topology, it has a better 
+efficiency than any linear solution can provide.</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="hooking-it-up">Hooking It Up</h2>
+        <p>There are three parts to consider when embedding the Sunny Buddy into a project:</p>
+
+<ul>
+<li>Solar Panel Input</li>
+<li>Battery Output</li>
+<li>Load</li>
+</ul>
+
+<p></p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/1/7/0/sunny-buddy-hookup_2_1000w.png"><img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/sunny-buddy-hookup_2_1000w.png" alt="Sunny Buddy Hookup"></a> </div><p></p>
+
+<h3>Solar Panel Input</h3>
+
+<p>The input side of the Sunny Buddy comes with a common barrel jack installed. <!-- SparkFun's [small](https://www.sparkfun.com/products/7845), [large](https://www.sparkfun.com/products/7840), and [huge](https://www.sparkfun.com/products/9241) solar panels all come with this sort of jack installed, and can be plugged directly into the Sunny Buddy's female barrel jack. --></p>
+
+<p></p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/3/1/3/input_map.jpg"><img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/input_map.jpg" alt="Input diagram"></a> </div><p></p>
+
+<p>The following solar panels can be plugged directly in to the Sunny Buddy's female barrel jack with ease.</p>
+
+
+
+<div class="tile-wrap">
+<div class="tile product-tile has_addl_actions  grid " data-id="13782" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13782">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13782-01.jpg" alt="Solar Panel - 3.5W" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13782">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$4tAkzHeKMsrCamKj.nSVM.U09fmxBpE8yG2rjACOGgIYFf5WrZxGe">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13782" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13782 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13782"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13782">
+          <span>Solar Panel - 3.5W</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13782    </span>
+
+          <p class="description" style="display:none">
+        Have a project that needs some good power? Do you like free 
+power provided by our friend, Mr. Sun? Check out this high qualit…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="39.00">39.00</span></span>
+        </span>
+      </div>
+    </div>
+  
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13782">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">13</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13782" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="13783" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13783">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13783-01.jpg" alt="Solar Panel - 6W" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13783">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$DVtZc/ei8MJrXTKVQfxQ7u62cQngQnTZL5KN2bUbs00dhOJpmdV.m">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13783" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13783 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13783"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13783">
+          <span>Solar Panel - 6W</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="20 available"><span class="sfe-icon-stock-low"><span class="visuallyhidden">20 available</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13783    </span>
+
+          <p class="description" style="display:none">
+        Have a project that needs some good power? Do you like free 
+power provided by our friend, Mr. Sun? Check out this high qualit…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="59.00">59.00</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="4.5 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-half" data-star-index="4"></span>
+  </span>
+      <span class="count">2</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13783">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">5</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13783" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="13784" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/13784">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/13784-01.jpg" alt="Solar Panel - 9W" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="13784">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$VR2m2L/zmA5M5fQ318XTfeNlbb90NbGm5C6.dKnozv1aEy9Ll.9rW">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_13784" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_13784 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_13784"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/13784">
+          <span>Solar Panel - 9W</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="33 available"><span class="sfe-icon-stock-low"><span class="visuallyhidden">33 available</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-13784    </span>
+
+          <p class="description" style="display:none">
+        Have a project that needs some good power? Do you like free 
+power provided by our friend, Mr. Sun? Check out this high qualit…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="79.00">79.00</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="4 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>
+  </span>
+      <span class="count">1</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="13784">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">17</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="13784" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+</div>
+
+  <div class="clearfix"></div>
+
+
+
+<div class="alert alert-info" role="alert">
+  <strong>Heads up!</strong> Under real world conditions, the Sunny Buddy may not be able to charge a LiPo battery sufficiently with the <a href="https://www.sparkfun.com/products/13781">small 2W</a> solar panel. The Sunny Buddy's output charge current measured was about <i>7mA</i>
+ since the small 2W solar panel was not able to reach the minimum input 
+voltage requirements by itself. We recommend using a larger solar panel 
+like the <a href="https://www.sparkfun.com/products/13782">3.5W</a>, <a href="https://www.sparkfun.com/products/13783">6W</a>, or <a href="https://www.sparkfun.com/products/13784">9W</a> solar panels to achieve the Sunny Buddy's minimum voltage input requirements. 
+</div>
+
+<p>There are also additional footprints for attaching <a href="https://www.sparkfun.com/products/8084">3.5mm screw terminals</a> or an additional <a href="https://www.sparkfun.com/products/119">barrel jack</a> to the board.</p>
+
+
+
+<div class="tile-wrap">
+<div class="tile product-tile has_addl_actions  grid " data-id="8084" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/8084">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/08084-01.jpg" alt="Screw Terminals 3.5mm Pitch (2-Pin)" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="8084">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$Uh5C4H6ZjjePCIf/RnLQJOcvlBxs2nkTa.YFqqOHh04pqgC/fHdiS">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_8084" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_8084 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_8084"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/8084">
+          <span>Screw Terminals 3.5mm Pitch (2-Pin)</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-08084    </span>
+
+          <p class="description" style="display:none">
+        Screw Terminal 3.5mm pitch pins with slide-locking together to 
+form any size you need. Rated up to 125V @ 6A, and can accept …      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="0.95">0.95</span></span>
+        </span>
+      </div>
+    </div>
+  
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="8084">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">14</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="8084" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="119" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/119">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/00119-03-L.jpg" alt="DC Barrel Power Jack/Connector" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="119">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$5DtErHDPivq1oN0P112TBuer9i7yd9e8Mnso1d9xnuwF5OJ0MxXOy">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_119" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_119 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_119"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/119">
+          <span>DC Barrel Power Jack/Connector</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-00119    </span>
+
+          <p class="description" style="display:none">
+        DC power jack/connector. This is a common barrel-type power jack
+ for DC wall supplies. These are compatible with our DC wall …      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="1.25">1.25</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="3 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-empty" data-star-index="3"></span>
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>
+  </span>
+      <span class="count">2</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="119">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">16</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="119" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+</div>
+
+  <div class="clearfix"></div>
+
+
+
+<p>Please note that if you intend to use two solar panels, you <strong>must</strong> clear solder jumper <strong>JP1</strong>
+ (it ships closed by default) and close solder jumper JP2 (it ships open
+ by default). Failure to do this will result in the second supply being 
+left unconnected. If <em>both</em> jumpers are left unconnected, no power will be sent to the board. If both jumpers are <em>shorted</em>, the second panel will be shorted out and contribute no power to the system but may be damaged by being short circuited.</p>
+
+<p>The maximum recommended input to the board is <strong>20V</strong>; this is a stack of two of our panels. The minimum is <strong>6V</strong>, but most solar panels should be above this.</p>
+
+<p>A useful trick for monitoring the input current of a single-panel system is to open JP1 and close JP2, then <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter#measuring-current">connect an ammeter</a> between the <strong>+</strong> pads on the two 3.5mm footprints. This will allow you to monitor the current draw from the solar panel. <strong>Note that JP1 must be resoldered and JP2 reopened before attempting to use the SunnyBuddy without the meter in place!</strong></p>
+
+<h3>Setting the Input Current Limit</h3>
+
+<p>The revised Sunny Buddy has an input set point potentiometer. This 
+allows the user to set an input voltage at which the Sunny Buddy will 
+reduce its current draw to maintain peak power input from the solar 
+panel.</p>
+
+<p>You'll want the voltage at this node to be at 2.7V when the solar panel is at the "knee" voltage we discussed in the <strong>Why MPPT?</strong>
+ section above. Some solar cell manufacturers may give you this 
+information; the manufacturers of our panels, however, have not. You can
+ either take the hard road and characterize your cell (ick) or take the 
+easy road and make an educated guess that the MPPT point will be at 
+about 90% of the voltage you see when you're in full sun.</p>
+
+<p>To find that point, plug your solar panel into the Sunny Buddy, but 
+don't put a battery or load on it. Measure the voltage from the "SET" 
+pad to the "GND" pad next two it, and tweak the potentiometer until that
+ voltage is about 3V. At that point, the Sunny Buddy will draw current 
+until either 450mA is going to the load and the battery <strong>or</strong> the solar cell voltage is 90% of its full-sun open-circuit nominal voltage.</p>
+
+<h3>Battery Output</h3>
+
+<p>The output of the Sunny Buddy is intended to charge a single Polymer 
+Lithium Ion cell. A 2-pin JST connector is populated, and will mate up 
+to most of the LiPo batteries SparkFun sells.The load should be 
+connected in parallel with the battery; again, footprints for a 3.5mm 
+terminal or a standard .1" spaced header have been provided.</p>
+
+<p></p><div class="center-block text-center"> <a href="https://cdn.sparkfun.com/assets/learn_tutorials/3/1/3/output_tour.jpg"><img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/output_tour.jpg" alt="Output diagram"></a> </div><p></p>
+
+<p>The charge current is set by resistor R1 in the schematic. By default it comes set to a maximum charge current of <strong>450mA</strong>.
+ It's recommended that batteries not be charged at greater than their 
+capacity rating; thus, the smallest battery that should be charged with 
+the Sunny Buddy is 450mAh.</p>
+
+<p>The revised Sunny Buddy adds an additional sense resistor footprint 
+in parallel with the built-in resistor. The charge current is equal to 
+.1/(R1||RSen); putting a 1-ohm resistor on the Rsen pads will increase 
+the charge current to ~550mA. R1 can be desoldered from the board if 
+charge currents below 450mA are desired.</p>
+
+<p>Note that it is possible to set the charge current to impossible 
+levels. If the current level is too high, the inductor will saturate, 
+which will limit the output current artificially.</p>
+
+<p>Finally, note that there's a jumper on the board that can be cut to 
+allow you to monitor the output current of the charger. You'll need to 
+reconnect the jumper pads after you've finished taking measurements.</p>
+
+<h3>The Load</h3>
+
+<p>The load can be connected to either the 0.1" or 3.5mm spaced pads on the right edge of the board.</p>
+
+
+
+<div class="tile-wrap">
+<div class="tile product-tile has_addl_actions  grid " data-id="116" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/116">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/00116-02-L.jpg" alt="Break Away Headers - Straight" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="116">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$jKok5D2HMB38WtANaYVLauJLDGbIc7Na833Dxuxe8X6.6/IqlQUDm">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_116" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_116 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_116"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/116">
+          <span>Break Away Headers - Straight</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-00116    </span>
+
+          <p class="description" style="display:none">
+        A row of headers - break to fit. 40 pins that can be cut to any 
+size. Used with custom PCBs or general custom headers.      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="1.50">1.50</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="4.6 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-half" data-star-index="4"></span>
+  </span>
+      <span class="count">20</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="116">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">98</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="116" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="115" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/115">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/00115-03-L.jpg" alt="Female Headers" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="115">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$0KjekJV4xWUCoBlkQbX2ju4fc69F5cCGOcP/iiES.h8a42ZC4KhRu">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_115" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_115 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_115"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/115">
+          <span>Female Headers</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-00115    </span>
+
+          <p class="description" style="display:none">
+        Single row of 40-holes, female header. Can be cut to size with a
+ pair of wire-cutters. Standard .1" spacing. We use them exte…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="1.50">1.50</span></span>
+        </span>
+      </div>
+    </div>
+  
+          <span class="star_rating">
+      
+<span class="product-rating" title="4.1 stars">
+          <span class="sfe-icon-star-full" data-star-index="0"></span>
+          <span class="sfe-icon-star-full" data-star-index="1"></span>
+          <span class="sfe-icon-star-full" data-star-index="2"></span>
+          <span class="sfe-icon-star-full" data-star-index="3"></span>
+          <span class="sfe-icon-star-empty" data-star-index="4"></span>
+  </span>
+      <span class="count">7</span>
+    </span>
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="115">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">52</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="115" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="8084" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/8084">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/08084-01.jpg" alt="Screw Terminals 3.5mm Pitch (2-Pin)" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="8084">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$ApayWDBDX6wf7tuhu2r3I.c6gQcI33lywcOtvl.2YHctQIGHH54Cu">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_8084" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_8084 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_8084"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/8084">
+          <span>Screw Terminals 3.5mm Pitch (2-Pin)</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      PRT-08084    </span>
+
+          <p class="description" style="display:none">
+        Screw Terminal 3.5mm pitch pins with slide-locking together to 
+form any size you need. Rated up to 125V @ 6A, and can accept …      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="0.95">0.95</span></span>
+        </span>
+      </div>
+    </div>
+  
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="8084">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">14</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="8084" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+<div class="tile product-tile has_addl_actions  grid " data-id="14574" itemscope="" itemtype="http://schema.org/Product">
+  <div class="actions-wrap">
+
+          <a class="thumb" href="https://www.sparkfun.com/products/14574">
+        <img src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/14574-LED_Pigtail_connector_2_Pin_-01.jpg" alt="LED Strip Pigtail Connector (2-pin)" height="140">
+      </a>
+    
+          <div class="actions" style="display:none">
+        <form class="form-inline" action="https://www.sparkfun.com/cart/add" data-cart-action="add" method="post">
+          <input type="hidden" name="id" value="14574">
+          <input type="hidden" name="qty" value="1">
+          <input type="hidden" name="csrf_token" value="$2y$04$9nGx6myZ5hxetHxSHGisQuVxY0/6WjcqBqBuEZumTYeuRV1OoWhoO">          <!-- Add to Cart -->
+          <div class="quantity-container">
+            <input aria-label="Quantity" type="text" name="qty" id="add_qty_14574" class="add_qty quantity form-control" data-spin-buttons="{&quot;min&quot;: 1, &quot;max&quot;: 10000}" value="1">
+          </div>
+                      <input type="submit" class="btn btn-cart btn-action" value="Add to Cart">
+                  </form>
+      </div>
+      <div class="added_to_cart_14574 hide added_to_cart" style="display: none;">
+        <p class="success-message">
+          added <strong class="added_qty_14574"></strong> to your <a href="https://www.sparkfun.com/cart">cart</a>!
+        </p>
+      </div>
+    
+  </div><!--/.actions-wrap-->
+
+  <div class="main">
+
+    
+    <h3 class="title">
+              <a href="https://www.sparkfun.com/products/14574">
+          <span>LED Strip Pigtail Connector (2-pin)</span>
+        </a>
+          </h3>
+
+    <span class="bubbles" style="display:none">
+      
+  <a data-toggle="notify" href="https://learn.sparkfun.com/static/bubbles/" title="in stock"><span class="sfe-icon-stock-in"><span class="visuallyhidden">In stock</span></span></a>
+    </span>
+
+    <span class="sku">
+      CAB-14574    </span>
+
+          <p class="description" style="display:none">
+        These 2-pin JST-SM pigtail connectors mate perfectly with LED 
+strips and other applications that require only two lines and a…      </p>
+    
+  </div>
+
+      <div>
+      <div class="prices">
+                <span class="price-sale">
+          <span class="price calculated"><span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="0.95">0.95</span></span>
+        </span>
+      </div>
+    </div>
+  
+  
+  
+      <div class="addl_actions">
+      <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="products" data-entity-id="14574">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">5</span>
+</span>      <div class="dropdown wishlist-dropdown simple ">
+  <a class="btn btn-default btn-sm  dropdown-toggle" title="Add to wish list" data-toggle="dropdown" data-product-id="14574" data-source="add_product_tile" href="#">
+    <span class="glyphicon glyphicon-list"></span>
+    <span class="name">Wish List</span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</div>
+    </div>
+  
+</div>
+</div>
+
+  <div class="clearfix"></div>
+
+
+
+<p>It's important that the load not be too heavy; since it is in 
+parallel with the battery, it will steal some of the charge current from
+ the battery when it is operating.</p>
+
+<p>To avoid this, <a href="https://learn.sparkfun.com/tutorials/reducing-arduino-power-consumption">consider putting active circuitry to sleep</a>
+ whenever possible, or using a microcontroller to turn parts of the load
+ on or off as they are not needed. Methods for doing this are beyond the
+ scope of this tutorial.</p>      </div>
+          <div class="section tutorial-page">
+        <h2 id="resources--going-further">Resources and Going Further</h2>
+        <p>If you're looking to get more out of your Sunny Buddy, be sure to check out these resources first:</p>
+
+<ul>
+<li><a href="https://cdn.sparkfun.com/datasheets/Prototyping/SunnyBuddyv10.pdf">Sunny Buddy Schematic</a> -- A PDF of the Sunny Buddy schematic.</li>
+<li><a href="https://cdn.sparkfun.com/datasheets/Prototyping/SunnyBuddyv10.zip">Sunny Buddy Eagle Files</a> -- The PCB design files.</li>
+<li><a href="https://cdn.sparkfun.com/datasheets/Prototyping/LT3652.pdf">LT3652 Datasheet</a>
+ -- Everything you could ever want to know about the Linear Tech LT3652,
+ the peak-power tracking, battery charging soul of the Sunny Buddy.</li>
+<li><a href="https://github.com/sparkfun/SunnyBuddy">Sunny Buddy GitHub Repo</a> -- Your source for the latest and greatest design files.</li>
+</ul>
+
+<p>If you're looking for some inspiration for a project that you can 
+embed the Sunny Buddy into, check out some of these related tutorials 
+and projects:</p>
+
+<ul>
+<li><p><a href="https://learn.sparkfun.com/tutorials/gps-basics">GPS Basics</a>
+ -- If your project is outdoors (a safe assumption if you're using the 
+Buddy), consider adding GPS to it. It's not as hard as you think!</p>
+
+
+<div class="tile-wrap">
+  <div class="tile tutorial-tile has_addl_actions big grid " data-id="9">
+
+  <a href="https://learn.sparkfun.com/tutorials/gps-basics">
+          <div class="thumb-wrap">
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/500-282/assets/3/6/6/f/7/50edfc17ce395f7105000000.jpg)"></div>
+      </div>
+    
+    
+    <h3 class="title">GPS Basics</h3>
+    <h4 class="metaline">December 14, 2012</h4>  </a>
+
+      <div class="description">
+      The Global Positioning System (GPS) is an engineering marvel that 
+we all have access to for a relatively low cost and no subscription fee.
+ With the correct hardware and minimal effort, you can determine your 
+position and time almost anywhere on the globe.     </div>
+  
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="9">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">24</span>
+</span>  </div>
+
+</div>
+</div>
+
+  <div class="clearfix"></div>
+</li>
+<li><p><a href="https://learn.sparkfun.com/tutorials/weather-station-wirelessly-connected-to-wunderground">Weather Station Wirelessly Connected to Wunderground</a> -- The Sunny Buddy plays an important role in keeping this <a href="https://www.sparkfun.com/products/11395">Electric Imp</a>-driven, wireless weather station humming.</p></li>
+</ul>
+
+<!-- <div class="center-block text-center"> [![Wimp in action](https://cdn.sparkfun.com/r/500-500/assets/learn_tutorials/2/1/7/Setup-4.jpg)](tutorials/217) </div> 
+
+<div class="center-block text-center"> _The Wimp in action!_ </div> -->
+
+
+<div class="tile-wrap">
+  <div class="tile tutorial-tile has_addl_actions big grid " data-id="217">
+
+  <a href="https://learn.sparkfun.com/tutorials/weather-station-wirelessly-connected-to-wunderground">
+          <div class="thumb-wrap">
+        <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/500-282/assets/learn_tutorials/2/1/7/thumb.jpg)"></div>
+      </div>
+    
+    
+    <h3 class="title">Weather Station Wirelessly Connected to Wunderground</h3>
+    <h4 class="metaline">April 11, 2014</h4>  </a>
+
+      <div class="description">
+      Build your own open-source, official Wunderground weather station that connects over WiFi via an Electric Imp.    </div>
+  
+  
+  <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="learn_tutorials" data-entity-id="217">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">29</span>
+</span>  </div>
+
+</div>
+</div>
+
+  <div class="clearfix"></div>
+
+
+<ul>
+<li><p>Or check out SparkFun's project spotlight on the <a href="https://github.com/sparkfun/Rogue_Router">SparkFun Rogue Router for a Solar Powered File Server</a> with the ESP8266:</p>
+
+<div class="flex-video-wrap clearfix">
+  <div class="flex-video widescreen img">
+    <iframe src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/a.html" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+  </div>
+</div>
+</li>
+</ul>
+
+<p>You can also check out this blog post for more ideas:</p>
+
+
+<div class="tile-wrap">
+  <div class="tile blog-tile has_addl_actions " data-id="2772">
+  <a href="https://www.sparkfun.com/news/2772" title="September 10, 2018: Tired of paying The Man for your power? Before you go off-grid, this is the video you want to see. We'll give you the background on solar cell function and performance, and talk about some of the other parts you'll need to get the job done.">
+              <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/338-190/assets/home_page_posts/2/7/7/2/Thumb__8_.jpg)"></div>
+        <h3 class="title">ATP: How Solar Cells Work</h3>
+          <div class="metaline">
+        <span class="meta">September 10, 2018</span>
+              </div>
+      </a>
+    <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="blog_posts" data-entity-id="2772">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">0</span>
+</span>  </div>
+</div>
+<div class="tile blog-tile has_addl_actions " data-id="3081">
+  <a href="https://www.sparkfun.com/news/3081" title="August 29, 2019: This summer I went on a tear setting up connected devices in my house with one goal; simplifying the mundane tasks of owning a house. The whole project has got me automating as much as I can, but also non-connected solutions are springing up as well. In this Enginursday, I build a roof over my new connected outdoor outlet.">
+              <div class="thumb" style="background-image:url(https://cdn.sparkfun.com/c/338-190/assets/home_page_posts/3/0/8/1/IMG_9613.jpg)"></div>
+        <h3 class="title">Enginursday: 3D Printed Housing Fixtures</h3>
+          <div class="metaline">
+        <span class="meta">August 29, 2019</span>
+              </div>
+      </a>
+    <div class="addl_actions">
+    <span class="fave_widget simple">
+  <a href="#" class="fave_btn " title="Add to favorites" data-entity="blog_posts" data-entity-id="3081">
+    <span class="fave_yes">
+      <span class="glyphicon glyphicon-heart"></span>
+      <span class="name">Favorited</span>
+    </span>
+    <span class="fave_no">
+      <span class="glyphicon glyphicon-heart-empty"></span>
+      <span class="name">Favorite</span>
+    </span>
+  </a>
+  <span class="fave_count">0</span>
+</span>  </div>
+</div>
+</div>
+
+  <div class="clearfix"></div>      </div>
+    
+        <div class="share-link-inline">
+
+  <a class="share-link-toggle" href="#">
+    <span class="share-title">
+      <span class="sfe-icon-share"></span>
+      Share    </span>
+  </a>
+
+  <div class="share-link-inner dialog">
+    Use this URL to share:<br>
+    <input class="form-control input-sm" type="text" value="http://sfe.io/t313" onclick="$(this).trigger('select');">
+
+    <div class="share-social">
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','googleplus');" href="https://plus.google.com/share?url=http%3A%2F%2Fsfe.io%2Ft313" title="Share on Google+"><span class="sfe-icon-google-plus hidetext"><span>Share on Google+</span></span></a>
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','tumblr');" href="https://www.tumblr.com/share/link?url=http%3A%2F%2Fsfe.io%2Ft313&amp;name=Sunny+Buddy+Solar+Charger+V13+Hookup+Guide+" title="Share on Tumblr"><span class="sfe-icon-tumblr hidetext"><span>Share on Tumblr</span></span></a>
+
+      <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','reddit');" href="https://www.reddit.com/submit?url=http%3A%2F%2Fsfe.io%2Ft313" title="Submit to reddit"><span class="sfe-icon-reddit hidetext"><span>Submit to reddi</span></span></a>
+
+    </div>
+
+    </div>
+  
+  <div class="share-social">
+
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','twitter');" href="https://twitter.com/intent/tweet?text=Sunny+Buddy+Solar+Charger+V13+Hookup+Guide+&amp;url=http%3A%2F%2Fsfe.io%2Ft313&amp;via=sparkfun" title="Share on Twitter"><span class="sfe-icon-twitter hidetext"><span>Share on Twitter</span></span></a>
+
+    <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','facebook');" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fsfe.io%2Ft313&amp;t=Sunny+Buddy+Solar+Charger+V13+Hookup+Guide+" title="Share on Facebook"><span class="sfe-icon-facebook-nobox hidetext"><span>Share on Facebook</span></span></a>
+
+          <a rel="nofollow" onclick="return $(this).sfeutil('track_link',this,'Share','clicked','pinterest');" href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fsfe.io%2Ft313&amp;media=https%3A%2F%2Fcdn.sparkfun.com%2F%2Fr%2F500-1000%2Fassets%2Flearn_tutorials%2F3%2F1%2F3%2Fdefault.jpg&amp;description=Sunny+Buddy+Solar+Charger+V13+Hookup+Guide+" title="Pin It"><span class="sfe-icon-pinterest hidetext"><span>Pin It</span></span></a>
+    
+  </div>
+
+  
+</div>
+
+  </div>
+
+  <div class="col-sm-4 nav-menu" id="nav-pages">
+
+    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>
+
+    <div id="sidebar_affix" class="affix">
+
+      <div id="tutorial-pages" class="list-group">
+        <a class="list-group-item"><b>Sections</b></a>
+                          <a data-pagename="introduction" class="list-group-item" href="#introduction">
+            Introduction          </a>
+                  <a data-pagename="why-mppt" class="list-group-item" href="#why-mppt">
+            Why MPPT?          </a>
+                  <a data-pagename="hooking-it-up" class="list-group-item active" href="#hooking-it-up">
+            Hooking It Up          </a>
+                  <a data-pagename="resources--going-further" class="list-group-item" href="#resources--going-further">
+            Resources and Going Further          </a>
+              </div>
+
+      <div class="list-group">
+        <a class="list-group-item" href="https://learn.sparkfun.com/tutorials/sunny-buddy-solar-charger-v13-hookup-guide-/discuss">
+          Comments
+          <span class="badge">19</span>
+        </a>
+                  <a class="list-group-item" href="https://learn.sparkfun.com/tutorials/sunny-buddy-solar-charger-v13-hookup-guide-/introduction">
+            View Paginated
+          </a>
+                <a class="list-group-item" href="#" onclick="window.print(); return false;">
+          Print
+        </a>
+      </div>
+
+      <ul class="list-group">
+        <li class="list-group-item"><b>Tags</b></li>
+        <li class="list-group-item"><ul class="tags-list">
+  <li>
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/hookup">Hookup</a>  </li>
+  <li>
+    <a class="tag" href="https://learn.sparkfun.com/tutorials/tags/power">Power</a>  </li>
+</ul>
+</li>
+      </ul>
+
+      <ul class="list-group">
+        <li class="list-group-item"><b>License</b></li>
+        <li class="list-group-item">
+          <span class="sfe-icon-cc">
+            <span class="visuallyhidden">Creative Commons</span>
+          </span>
+          <small>tutorials are <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="new">CC BY-SA 4.0</a></small>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+</div>
+
+      </div> <!-- /container -->
+    </div> <!-- /content -->
+
+    
+<footer>
+
+<div class="social">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="sharing-ingenuity">
+          <span class="sfe-icon-flame"></span>
+          <span class="text"><span class="text-top">Start<br></span>something.</span>
+        </div>
+        <ul class="spew">
+          <li><a href="https://www.github.com/sparkfun" target="_blank" class="sfe-icon-github"><span class="visuallyhidden">GitHub</span></a></li>
+          <li><a href="https://www.youtube.com/sparkfun" target="_blank" class="sfe-icon-youtube"><span class="visuallyhidden">YouTube</span></a></li>
+          <li><a href="https://www.vimeo.com/sparkfun" target="_blank" class="sfe-icon-vimeo"><span class="visuallyhidden">Vimeo</span></a></li>
+          <li><a href="https://www.facebook.com/SparkFun" target="_blank" class="sfe-icon-facebook"><span class="visuallyhidden">Facebook</span></a></li>
+          <li><a href="https://www.instagram.com/sparkfun/" target="_blank" class="sfe-icon-instagram"><span class="visuallyhidden">Instagram</span></a></li>
+          <li><a href="https://plus.google.com/106084846822083498483/" target="_blank" class="sfe-icon-google-plus"><span class="visuallyhidden">Google Plus</span></a></li>
+          <li><a href="https://www.flickr.com/photos/sparkfun/" target="_blank" class="sfe-icon-flickr"><span class="visuallyhidden">Flickr</span></a></li>
+          <li><a href="https://twitter.com/#!/sparkfun" target="_blank" class="sfe-icon-twitter"><span class="visuallyhidden">Twitter</span></a></li>
+          <li><a href="https://www.sparkfun.com/feeds" class="sfe-icon-feed"><span class="visuallyhidden">RSS</span></a></li>
+        </ul>
+        <div class="newsletter">
+          <!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/v2.js"></script>
+<script data-hubspot-rendered="true">
+  hbspt.forms.create({
+    css: '',
+    cssClass: 'hubspot-newsletter-subscribe',
+    portalId: '2224003',
+    formId: 'd2b17dd4-e1bb-406a-ba41-44c19dcd0376'
+  });
+</script><div class="hbspt-form" id="hbspt-form-1574045972823-1864526959"><form novalidate="" accept-charset="UTF-8" action="https://forms.hsforms.com/submissions/v3/public/submit/formsnext/multipart/2224003/d2b17dd4-e1bb-406a-ba41-44c19dcd0376" enctype="multipart/form-data" id="hsForm_d2b17dd4-e1bb-406a-ba41-44c19dcd0376" method="POST" class="hubspot-newsletter-subscribe hs-form hs-form-private hsForm_d2b17dd4-e1bb-406a-ba41-44c19dcd0376 hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376 hs-form-d2b17dd4-e1bb-406a-ba41-44c19dcd0376_da40c35f-4074-4ba6-bfa9-1f447b69fe42" data-form-id="d2b17dd4-e1bb-406a-ba41-44c19dcd0376" data-portal-id="2224003" target="target_iframe_d2b17dd4-e1bb-406a-ba41-44c19dcd0376" data-reactid=".hbspt-forms-0"><div class="hs_email hs-email hs-fieldtype-text field hs-form-field" data-reactid=".hbspt-forms-0.1:$0"><label id="label-email-d2b17dd4-e1bb-406a-ba41-44c19dcd0376" class="" placeholder="Enter your " for="email-d2b17dd4-e1bb-406a-ba41-44c19dcd0376" data-reactid=".hbspt-forms-0.1:$0.0"><span data-reactid=".hbspt-forms-0.1:$0.0.0"></span></label><legend class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.1:$0.1"></legend><div class="input" data-reactid=".hbspt-forms-0.1:$0.$email"><input id="email-d2b17dd4-e1bb-406a-ba41-44c19dcd0376" class="hs-input" type="email" name="email" placeholder="" autocomplete="email" data-reactid=".hbspt-forms-0.1:$0.$email.0"></div></div><noscript data-reactid=".hbspt-forms-0.2"></noscript><div class="hs_submit hs-submit" data-reactid=".hbspt-forms-0.5"><div class="hs-field-desc" style="display:none;" data-reactid=".hbspt-forms-0.5.0"></div><div class="actions" data-reactid=".hbspt-forms-0.5.1"><input type="submit" value="SUBSCRIBE TO EDUCATOR NEWSLETTER" class="hs-button primary large" data-reactid=".hbspt-forms-0.5.1.0"></div></div><noscript data-reactid=".hbspt-forms-0.6"></noscript><input name="hs_context" type="hidden" value="{&quot;rumScriptExecuteTime&quot;:1901,&quot;rumServiceResponseTime&quot;:2369,&quot;rumFormRenderTime&quot;:4,&quot;rumTotalRenderTime&quot;:2375,&quot;rumTotalRequestTime&quot;:441,&quot;renderRawHtml&quot;:&quot;true&quot;,&quot;pageUrl&quot;:&quot;https://learn.sparkfun.com/tutorials/sunny-buddy-solar-charger-v13-hookup-guide-/all&quot;,&quot;pageTitle&quot;:&quot;Sunny Buddy Solar Charger V13 Hookup Guide - learn.sparkfun.com&quot;,&quot;source&quot;:&quot;FormsNext-static-3.402&quot;,&quot;timestamp&quot;:1574045972991,&quot;userAgent&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:67.0) Gecko/20100101 Firefox/67.0&quot;,&quot;originalEmbedContext&quot;:{&quot;cssClass&quot;:&quot;hubspot-newsletter-subscribe&quot;,&quot;portalId&quot;:&quot;2224003&quot;,&quot;formId&quot;:&quot;d2b17dd4-e1bb-406a-ba41-44c19dcd0376&quot;,&quot;target&quot;:&quot;#hbspt-form-1574045972823-1864526959&quot;},&quot;formTarget&quot;:&quot;#hbspt-form-1574045972823-1864526959&quot;,&quot;correlationId&quot;:&quot;7bcb0db8-2c96-4cb3-a79f-5fef0e29882e&quot;}" data-reactid=".hbspt-forms-0.7"><iframe name="target_iframe_d2b17dd4-e1bb-406a-ba41-44c19dcd0376" style="display:none;" data-reactid=".hbspt-forms-0.8"></iframe></form></div>
+        </div>
+      </div>
+    </div><!-- end .row -->
+  </div><!-- end .container -->
+</div><!-- end .social -->
+
+<div class="container">
+
+    <div class="row">
+
+    <div class="subfooter">
+
+      <div class="col-md-6 col-xs-12">
+
+        <div class="row">
+
+          <div class="col-xs-6">
+            <ul>
+              <li><b>About Us</b>
+              </li><li><a href="https://www.sparkfun.com/about_sparkfun">About SparkFun</a></li>
+              <li><a href="https://www.sparkfun.com/coverage">Press &amp; Media</a></li>
+              <li><a href="http://www.sparkfuneducation.com/" target="_blank">SparkFun Education <span class="glyphicon glyphicon-new-window"></span></a></li>
+              <li><a title="RSS Feeds" href="https://www.sparkfun.com/feeds">Feeds <span class="sfe-icon-feed"></span></a></li>
+              <li><a href="https://www.sparkfun.com/jobs">Jobs</a></li>
+              <li><a href="https://www.sparkfun.com/static/contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6">
+            <ul>
+              <li><b>Help</b></li>
+              <li><a href="https://www.sparkfun.com/support">Customer Service</a></li>
+              <li><a href="https://www.sparkfun.com/support#ShippingPolicy">Shipping</a></li>
+              <li><a href="https://www.sparkfun.com/returns">Return Policy</a></li>
+              <li><a href="https://www.sparkfun.com/static/faq">FAQ</a></li>
+                          </ul>
+          </div>
+
+        </div><!-- end .row -->
+
+        <div class="row">
+
+          <div class="col-xs-6">
+            <ul>
+              <li><b>Programs</b></li>
+              <li><a href="https://www.sparkfun.com/sponsorships">Become a Community Partner</a>                <ul><li><a href="https://www.sparkfun.com/cpp">Community Stories</a></li></ul>
+              </li>
+              <li><a href="https://www.sparkfun.com/customkits">Custom Kit Requests</a></li>
+              <li><a href="https://www.sparkfun.com/project_calls">Tell Us About Your Project</a></li>
+              <li><a href="https://learn.sparkfun.com/tutorials/how-to-sell-your-widget-on-sparkfun">Sell Your Widget on SparkFun</a></li>
+              <li><a href="https://www.sparkfun.com/distributors/apply">Become a SparkFun Distributor</a></li>
+              <li><a href="https://www.sparkfun.com/volume">Large Volume Sales</a> </li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6">
+            <ul>
+              <li><b>Community</b></li>
+              <li><a href="https://forum.sparkfun.com/">Forum</a></li>
+              <li><a href="https://www.sparkfun.com/quiz">Take the SparkFun Quiz</a></li>
+              <li><a href="https://www.kickstarter.com/pages/sparkfun">SparkFun Kickstarter Projects</a></li>
+              <li><a href="https://www.sparkfun.com/distributors">Distributors</a></li>
+            </ul>
+          </div>
+
+        </div><!-- end .row -->
+
+      </div><!-- end left column .col-sm-6 -->
+
+      <div class="col-md-6 col-xs-12">
+
+      <p>
+        In 2003, CU student Nate Seidle fried a power supply in his dorm
+ room and, in lieu of a way to order easy replacements, decided to start
+ his own company. Since then, SparkFun has been committed to sustainably
+ helping our world achieve electronics literacy from our headquarters in
+ Boulder, Colorado.
+      </p>
+      <p>
+        No matter your vision, SparkFun's products and resources are 
+designed to make the world of electronics more accessible. In addition 
+to over 2,000 open source components and widgets, SparkFun offers 
+curriculum, training and online tutorials designed to help demystify the
+ wonderful world of embedded electronics. We're here to help you start 
+something.
+      </p>
+
+      </div><!-- end left column .col-sm-6 -->
+
+    </div><!-- end .subfooter -->
+
+  </div><!-- end .row -->
+  
+  <ul class="copyleft">
+    <li>SparkFun Electronics <a href="https://www.sparkfun.com/news/300">®</a></li>
+    <li><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=6333+Dry+Creek+Parkway,+Niwot,+CO+80503">Niwot, Colorado</a></li>
+    <li><a href="https://www.sparkfun.com/support">Customer Service</a></li>
+    <li><a href="https://www.sparkfun.com/sitemap">Site Map</a></li>
+    <li><a href="https://www.sparkfun.com/terms">Terms of Service</a></li>
+    <li><a href="https://www.sparkfun.com/privacy">Privacy Policy</a></li>
+    <li class="desktop-toggle">
+              <a href="https://www.sparkfun.com/account/mobile_toggle?redirect=%2Flearn%2Ftutorials%2Fsunny-buddy-solar-charger-v13-hookup-guide-%2Fall">Desktop Site</a>          </li>
+  </ul>
+
+</div><!-- end .container -->
+
+</footer>
+
+    <div class="nav-account">
+  <ul class="nav nav-tabs">
+    <li class="visible-xs">
+      <a class="nav-toggle-account back" href="#">Your Account</a>
+    </li>
+          <li class="">
+        <a href="https://www.sparkfun.com/account/login?redirect=%2Flearn%2Ftutorials%2Fsunny-buddy-solar-charger-v13-hookup-guide-%2Fall" data-toggle="modal" data-target="#login_modal" data-remote="false">Log In</a>
+      </li>
+          <li class="">
+        <a href="https://www.sparkfun.com/account/make">Register</a>
+      </li>
+      </ul>
+</div>
+
+      </div><!-- end .wrapper-inner -->
+    </div><!-- end .wrapper -->
+
+    <!-- Login Modal -->
+<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Log In</h4>
+        <p class="modal-header-msg"></p>
+      </div>
+      <div class="modal-body">
+        <form role="form" class="recaptcha-form" action="https://www.sparkfun.com/account/login" method="post">
+          <input type="hidden" name="csrf_token" value="$2y$04$jSTf8P6pqJoq1cNBTWgvmO5T9XVP4uPAmMfvQrY/ynnD3ThCv3jFC">          <input type="hidden" name="redirect" value="/learn/tutorials/sunny-buddy-solar-charger-v13-hookup-guide-/all">
+          <div class="form-group">
+            <label for="login-username">Email</label>
+            <input type="email" tabindex="1" name="user" id="login-username" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input tabindex="2" type="password" name="passwd" id="login-password" class="form-control" autocomplete="off">
+          </div>
+                      <div class="form-group">
+              <div class="g-recaptcha " data-sitekey="6LdC6DsUAAAAACOuFFkjQ5ICxIZHrq1XhvlpzXTd"><div style="width: 304px; height: 78px;"><div><iframe src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/anchor.html" role="presentation" name="a-xy5rwkksdf78" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="304" height="78" frameborder="0"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+            </div>
+                    <div class="form-group">
+            <input type="submit" value="Log In" tabindex="3" class="btn btn-action">
+          </div>
+        </form>
+        <p>
+          <a href="https://www.sparkfun.com/account/forgot_password">Forgot your password?</a>          <br>
+          No account? <a id="btn_register_account" href="https://www.sparkfun.com/account/make">Register one!</a>        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script type="text/javascript">
+      var SFECONFIG = {
+        dnt: true,
+        http_server: 'http://learn.sparkfun.com',
+        https_server: 'https://learn.sparkfun.com',
+        http_static: 'https://cdn.sparkfun.com',
+        learn_server: 'https://learn.sparkfun.com',
+        commerce_server: 'https://www.sparkfun.com',
+        base_url: '/',
+        url: '/',
+        controller: 'tutorials',
+        action: 'view',
+        entity_id: '',
+        auth: false,
+        sparkrev: '1573594437',
+        search_key: 'xY6qr5Ui3V2UMA762D9Z'      };
+    </script>
+          <script src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/jquery.js"></script>
+      <script src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/jquery-ui.js"></script>
+      <script src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/learn-built.js"></script>
+    
+    <script>
+      $('#learn').learn();
+      $('#learn').sfeutil();
+      $.shared('domready');
+    </script><ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+                            <script src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/tutorials-built.js"></script>
+                        
+
+
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;" class="g-recaptcha-bubble-arrow"></div><div style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;" class="g-recaptcha-bubble-arrow"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge" src="Sunny%20Buddy%20Solar%20Charger%20V13%20Hookup%20Guide%20-%20learn.sparkfun.com_files/bframe.html" style="width: 100%; height: 100%;" name="c-xy5rwkksdf78" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" frameborder="0"></iframe></div></div></body></html>
