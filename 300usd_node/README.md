@@ -1,4 +1,6 @@
 
+These are notes on the first $300 solar node prototype.
+
 # Bill of Materials
 
 TODO finish this
@@ -34,7 +36,7 @@ For the first prototype the case and battery heatsink were custom-made by cuttin
 
 # Solar panel
 
-Our prototype uses [this Flexible 50 W ETFE panel](https://www.ebay.com/itm/RICH-SOLAR-50W-80W-100W-Mono-Flexible-Solar-Panel-12V-PV-Power-RV-Boat-ETFE/142823107329) which cost $80. One nice thing about it is that it's made in India rather than China, at least according to the labeling.
+Our prototype uses [this Renogy flexible 50 W ETFE panel](https://www.ebay.com/itm/RICH-SOLAR-50W-80W-100W-Mono-Flexible-Solar-Panel-12V-PV-Power-RV-Boat-ETFE/142823107329) which cost $80. One nice thing about it is that it's made in India rather than China, at least according to the labeling.
 
 You can find cheaper [$50 panel that probably aren't actually 50 W](https://www.ebay.com/itm/50W-Dual-12V-5V-USB-Solar-Power-Panel-Car-Boat-Battery-Charger-50A-Controller/293177993583) but eh they could be and we haven't even tested the one we got.
 
@@ -52,7 +54,7 @@ We'll definitely test that solution out, but we ended up with the aluminum block
 
 We're using Panasonic NCR18650B 3300 mAh batteries bought from [Li-ion Wholesale](https://liionwholesale.com/collections/batteries/products/panasonic-ncr18650b-battery-genuine-tested-6-8a-3400mah-flat-top-wholesale-lot?variant=1076987260).
 
-# Watchdog circuit
+# External watchdog
 
 The R910 will shut itself down on low battery and there is no way to make it turn itself back on when the battery charge level comes back up.
 
@@ -65,6 +67,12 @@ Here's [a guide](https://www.iot-experiments.com/arduino-pro-mini-1mhz-1-8v/) fo
 Note that at this point it doesn't matter whether it's an Arduino since we're not using the bootloader. All we need is an Atmega 328P (or similar) and we aren't even using the external oscillator nor the 3.3 or 5 V regulator on the dev boards.
 
 Here's a really nice [http://www.engbedded.com/fusecalc](Atmel AVR E-fuse calculator)
+
+# WiFi antennas
+
+The first prototype uses two 2.4 GHz 14 dBi panel antennas with RP-SMA connectors for ~$13 each [from ebay](https://www.ebay.com/itm/New-Directional-Antenna-WiFi-Extender-Panel-2-4-GHz-14dbi-High-Gain-Long-Range/192858084948). These are the most common type of antenna that show up if you search for `2.4 GHz 14 dBi panel antenna`. Preliminary testing gave us a 10 dBi gain (testing two R910 units side by side, one with two of these and one with normal antennas).
+
+We also bought two 5.8 GHz 14 dBi panel antennas with RP-SMA connectors for $9.60 each [from ebay](https://www.ebay.com/itm/5-8G-14db-Aerial-High-Gain-Panel-Antenna-for-FPV-5-8Ghz-TX-RX-2016-New-C6Q3/142925180377). These come without an enclosure and have not yet been tested. The advantage is the much smaller physical size due to the higher frequency.
 
 # Batteries
 
@@ -137,7 +145,7 @@ We ordered and ended up using the [Sparkfun Sunny Buddy](https://www.sparkfun.co
 Minimum probably:
 
 1" depth but will be super tight with antenna plugs sticking up.
-It will work if we only use angled antenna connectors and pigtails
+It will work if we only use angled antenna connectors and pigtails.
 
 4G hotspot is 4 1/4" so that's minimum for one dimension. Let's call it width.
 The solar charge controller should fit on top of the hotspot within the 1" depth.
