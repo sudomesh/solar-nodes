@@ -23,6 +23,12 @@ To program an Arduino as an ISP the easiest way is by using the official Arduino
 // #define USE_OLD_STYLE_WIRING
 ```
 
+and change the `SPI_CLOCK` line to:
+
+```
+#define SPI_CLOCK 		(128000/6)
+```
+
 Then upload the sketch to your 3.3 V capable Arduino. This will now be your ISP.
 
 Here's how to hook up your ISP to the soon-to-be 1.8 V arduino.
@@ -35,6 +41,8 @@ ISP <-> 1.8 V Arduino:
 * Pin 11 <-> Pin 11
 * Pin 12 <-> Pin 12
 * Pin 13 <-> Pin 13
+
+Finally hook up a ~10 uF capacitor between RST and GND (positive to RST) on the Arduino you're using as a programmer.
 
 You're now ready to program the 1.8 V device via the Arduino as ISP.
 
@@ -68,23 +76,109 @@ Extended Fuse Byte (EFB):
 
 So EFB is 11111111 or 0xFF
 
+You should also ensure that the lock bits are set to 0xff since e.g. burning the arduino bootloader would have set the lock bits to 0x0f which prevents overwriting the bootloader.
+
 Here's the `avrdude` command-line to program the e-fuses:
 
 ```
-avrdude -P /dev/ttyUSB0 -c avrisp -p m328p -b 19200 -U lfuse:w:<0xE3>:m -U hfuse:w:<0xDB>:m -U efuse:w:<0xFF>:m
+avrdude -P /dev/ttyUSB0 -c arduino -p m328p -b 19200 -U lfuse:w:0xe3:m -U hfuse:w:0xdb:m -U efuse:w:0xff:m -U lock:w:0xff:m
+```
+
+Don't worry if verification of the lock byte fails as long as everything else succeeds.
+
+Warning: When the clock is set to 128 KHz you may have trouble programming the arduino. You need to add -B 250 to the avrdude command. Here's how to switch it back to 8 MHz:
+
+```
+avrdude -P /dev/ttyUSB0 -c arduino -p m328p -b 19200 -U lfuse:w:0xff:m -B 250
+```
+
+# Voltage regulator
+
+Since the external watchdog will be spending most of its time asleep it is likely that the quiescent current consumption of the voltage converter will be the most important spec.
+
+A low quiescent current 1.8 V LDO is probably both the simplest and most efficient solution.
+
+# Atmega328P power consumption
+
+Here's a good [rundown on reducing Atmega 328 power consumption](http://www.gammon.com.au/forum/?id=11497) which includes power consumption figures:
+
+* 0.25 mW at 1.8 V and 128 kHz when idle (not sleeping)
+
+This seems already good enough that we almost don't need to worry about sleeping, though of course we do also have to take into account the voltage regulator. Still, we can expect a power consumption of less than 1 mW (with power LED disabled) and before taking into account the voltage regulator quiescent current.
+
+According to [this](http://home-automation-community.com/arduino-low-power-how-to-run-atmega328p-for-a-year-on-coin-cell-battery/) the consumption of at 3.3 V and 8 MHz is:
+
+* 11.58 mW when idle (not sleeping)
+* 0.0149 mW when in SLEEP_MODE_PWR_DOWN
+
+These numbers are all without taking into account the power LED and voltage regulator.
+
+Here's [a rundown of the different sleep modes](https://circuitdigest.com/microcontroller-projects/arduino-sleep-modes-and-how-to-use-them-to-reduce-power-consumption).
+
+## Sleeping using watchdog timer
+
+The maximum sleep time in `SLEEP_MODE_PWR_DOWN`, the Atmega328P's lowest power mode, is only 8 seconds.
+
+Article [here](https://donalmorrissey.blogspot.com/2010/04/sleeping-arduino-part-5-wake-up-via.html).
+
+## Sleep mode using internal timer
+
+The maximum sleep time in `SLEEP_MODE_IDLE` depends on the clock used.
+
+There's a good article [here](https://donalmorrissey.blogspot.com/2011/11/sleeping-arduino-part-4-wake-up-via.html) though it assumes a 16 MHz clock.
+
+At 128 kHz with a 1024 prescaler using the 16 bit Timer 1 we get:
+
+```
+(2^16 / 128000) * 1024 = 524.288 seconds
 ``
+
+or ~8.7 minutes. Every 5 minutes is probably a reasonable interval.
+
+## Arduino Library
+
+The [LowPower](https://www.kevssite.com/arduino-power-consumption-delay-vs-sleep/) library makes it easy to sleep and turn off/on specific peripherals.
+
+It seems to only support `SLEEP_MODE_PWR_DOWN` and `SLEEP_MODE_IDLE` but those are the only modes we're interested in anyway.
 
 # Compiling the watchdog program
 
-ToDo
+Install gcc-avr:
+
+```
+sudo apt install gcc-avr
+```
+
+Then compile with:
+
+```
+make
+```
+
+# Compiling and uploading hello world
+
+To test that you're actually able to program the Arduino, you can compile and upload the `hello_world` program:
+
+```
+make hello_world
+avrdude -P /dev/ttyUSB0 -c arduino -p m328p -b 19200 -U flash:w:hello_world.ihex
+```
+
+If it works, the Arduino's LED will begin blinking a repeating pattern of one long blink followed by two short blinks.
 
 # Uploading the watchdog program
+
+TODO the watchdog program is not yet complete.
 
 To program the sketch:
 
 ```
-avrdude -P /dev/ttyUSB0 -c avrisp -p m328p -b 19200 -U flash:w:watchdog.hex
+avrdude -P /dev/ttyUSB0 -c arduino -p m328p -b 19200 -U flash:w:watchdog.ihex
 ```
+
+# Removing the LED
+
+You should desolder the power LED on the Arduino board as it will suck quite a bit of power.
 
 # Accessing 1.8 V when R910 is off
 
