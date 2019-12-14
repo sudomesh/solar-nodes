@@ -13,20 +13,20 @@ It probably still could be a 3.3 V device since they can often operate on a bit 
 
 # 1.8 V arduino
 
-Here's [a guide](https://www.iot-experiments.com/arduino-pro-mini-1mhz-1-8v/) for how to reprogram a 3.3 V arduino pro mini to 1.8 V. It will work for any Atmega 328P. The guide uses a purpose-built ISP to low-level program the arduino but the simpler solution is to use another 3.3 V arduino as the programmer using the ArduinoISP method.
+Here's [a guide](https://www.iot-experiments.com/arduino-pro-mini-1mhz-1-8v/) for how to reprogram a 3.3 V arduino pro mini to 1.8 V. It will work for any Atmega 328P. The guide uses a purpose-built ISP to low-level-program the arduino but the simpler solution is to use another 3.3 V arduino as the programmer using the ArduinoISP method.
 
 ## Programming an Arduino as ISP
 
 To program an Arduino as an ISP the easiest way is by using the official Arduino IDE. Simply go to File -> Examples -> 11.ArduinoISP -> ArduinoISP. Then uncomment the line:
 
 ```
-// #define USE_OLD_STYLE_WIRING
+#define USE_OLD_STYLE_WIRING
 ```
 
 and change the `SPI_CLOCK` line to:
 
 ```
-#define SPI_CLOCK 		(128000/6)
+#define SPI_CLOCK 		(64000/6)
 ```
 
 Then upload the sketch to your 3.3 V capable Arduino. This will now be your ISP.
@@ -86,11 +86,7 @@ avrdude -P /dev/ttyUSB0 -c arduino -p m328p -b 19200 -U lfuse:w:0xe3:m -U hfuse:
 
 Don't worry if verification of the lock byte fails as long as everything else succeeds.
 
-Warning: When the clock is set to 128 KHz you may have trouble programming the arduino. You need to add -B 250 to the avrdude command. Here's how to switch it back to 8 MHz:
-
-```
-avrdude -P /dev/ttyUSB0 -c arduino -p m328p -b 19200 -U lfuse:w:0xff:m -B 250
-```
+Warning: When the clock is set to 128 KHz you may have trouble programming the arduino. If this happens you can try to use the `-B` flag for `avrdude` to lower the bitclock.
 
 # Voltage regulator
 
@@ -138,8 +134,6 @@ or ~8.7 minutes. Every 5 minutes is probably a reasonable interval.
 ## Arduino Library
 
 The [LowPower](https://www.kevssite.com/arduino-power-consumption-delay-vs-sleep/) library makes it easy to sleep and turn off/on specific peripherals.
-
-It seems to only support `SLEEP_MODE_PWR_DOWN` and `SLEEP_MODE_IDLE` but those are the only modes we're interested in anyway.
 
 # Compiling the watchdog program
 
